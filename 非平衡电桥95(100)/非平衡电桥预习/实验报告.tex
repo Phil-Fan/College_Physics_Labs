@@ -1,0 +1,200 @@
+\documentclass[10pt,a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}    % 提供方程环境
+\usepackage{physics}    % 简化向量、微分算子语法
+\newcommand{\myspace}[1]{\par\vspace{#1\baselineskip}} %自定义空一行
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{booktabs} % 添加 booktabs 宏包
+\pagestyle{fancy}
+\fancyhf{}  % 清除所有页眉页脚
+\fancyfoot[C]{\thepage}  % 在页脚中央设置页码
+\renewcommand{\headrulewidth}{0pt}  % 去掉页眉横线
+\renewcommand{\footrulewidth}{0pt}  % 去掉页脚横线
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{titlesec}
+
+% 重新定义section格式
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\chinese{section}、}
+  {0pt}
+  {}
+
+% 给出常用字号的自定义指令
+\newcommand{\chuhao}{\fontsize{42pt}{48pt}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{42pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{21.6pt}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{20pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{18pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{16pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{12.6pt}\selectfont}
+
+% 定义中文数字转换
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\zhnum{section}、}  % 使用\zhnum而不是\chinese
+  {0pt}
+  {}
+
+% 标题设置
+\title{\xiaochu\textbf{物理实验预习报告}}
+\author{}
+\date{}
+
+\begin{document}
+
+\vspace*{36pt} % 顶部空白
+
+% 居中填写区域
+\begin{center}
+    \includegraphics[width = 9cm]{head.png}
+    
+    \xiaochu\textbf{物理实验预习报告}
+    % 预留空白区域
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    
+    \sanhao\textbf{实验名称：\underline{\makebox[8cm]{ 非平衡电桥 }}} \\[10pt]
+    \sanhao\textbf{实验桌号：\underline{\makebox[8cm]{ 15 }}} \\[10pt]
+    \sanhao\textbf{指导教师：\underline{\makebox[8cm]{ 唐浩原 }}} \\[20pt]
+    
+    % 预留空白区域
+    \myspace{7}
+    
+   \sihao\textbf{班级：\underline{\makebox[6cm]{机器人工程2402}}} \\[10pt]
+    \sihao\textbf{姓名：\underline{\makebox[6cm]{毛挺}}} \\[10pt]
+    \sihao\textbf{学号：\underline{\makebox[6cm]{3240104043}}} \\[30pt]
+    
+   \sihao\textbf{实验日期: \underline{\makebox[0.8cm] 2025 }年 \underline{\makebox[0.4cm]10}月\underline{\makebox[0.4cm]11}日  星期\underline{\makebox[0.6cm]六}上午}
+    
+    \vspace{18pt}
+    \sihao 浙江大学物理实验教学中心
+    
+\end{center}
+
+\newpage
+
+
+    \section{实验综述}
+    
+    \xiaosi （自述实验现象、实验原理和实验方法，不超过500字，5分）
+    
+    \myspace{0}
+
+    
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=7cm]{非平衡电桥.png}
+    \caption{非平衡电桥电路图}
+    \label{fig:图1}
+    \end{wrapfigure}
+
+    \
+    
+    \subsubsection*{非平衡电桥工作原理：}
+    如右图所示，与惠斯登电桥相比，非平衡电桥在 B、D 间加的并非检流计，而是负载电阻\(R_g\)，通过\(I_g\)和\(U_g\)的测量来换算\(R_x\)的数值。当 B、D 处于开路状态时，\(R_g\)无穷大，\(I_g = 0\)，此时只有电压\(U_g\)，用U表示，则输出电压为：
+    \begin{equation*}
+    U = U_g=\frac{R_{2} R_{x}-R_{1} R_{3}}{(R_{1}+R_{x})(R_{2}+R_{3})} \varepsilon
+    \end{equation*}
+
+    调节四个桥臂电阻，使\(R_{2} R_{x}=R_{1} R_{3}\)，此时 B、D 两点电位相等，\(U = 0\)，电桥达到平衡状态。为了测量的准确性，在测量起始点，电桥必须调至平衡，称为预调平衡，这样可使输出电压只与某一臂电阻变化有关。若\(R_1\)、\(R_2\)、\(R_3\)固定，\(R_x\)作为传感器，随待测物理量（如温度、应力等）的改变而变化时，B、D 两点电位不等，电桥进入非平衡状态，\(R_x\)也由平衡状态变为\(R_x+\Delta R_x\)，此时 B、D 端输出的非平衡电压为：
+    \begin{equation*}
+        U=\frac{R_{2} R_{x}+R_{2} \Delta R_{x}-R_{1} R_{3}}{\left(R_{1}+R_{x}+\Delta R_{x}\right)\left(R_{2}+R_{3}\right)} \varepsilon
+    \end{equation*}
+    
+    根据U的大小变化，可知桥路中电阻的变化情况，由此知晓物理量的变化。
+    
+    \subsubsection*{非平衡电桥实验方法：}
+
+    \begin{enumerate}
+        \item 打开 FQ 型非平衡直流电桥开关，将\(R_a\)、\(R_b\)、\(R_c\)分别接至\(R_1\)、\(R_2\)、\(R_3\)；
+        \item 铜电阻 Cu50 在\(0^{\circ}C\)时阻值约为 50Ω，因此分别将\(R_a\)、\(R_b\)、\(R_c\)设为 50Ω；
+        \item 如有条件，可先在\(0^{\circ}C\)下对电桥预调平衡：将 “功能 - 电压选择” 开关置于 “非平衡 - 电压” 档，将待测铜电阻\(R_x\)置于盛冰水混合物的容器中，\(R_a\)、\(R_b\)、\(R_c\)均置于 50Ω 并接至\(R_1\)、\(R_2\)、\(R_3\)，按下 B、G 按钮，微调\(R_s\)，使输出电压为零，此时电桥平衡，实现\(t = 0^{\circ}C\)时，\(U = 0\)；
+        \item 将 “功能 - 电压选择” 开关置于 “非平衡 - 电压” 档，按下 B、G 按钮测量并记录非平衡电压值U和室温t；
+        \item 利用非平衡电桥加热装置对铜电阻进行加温，以\(5^{\circ}C\)为间隔，待温度达到相对稳定时按下 B、G 按钮，测量并记录非平衡电压U及其对应温度t；
+        \item 利用实验数据作\(U - t\)特性曲线，由\(\alpha=\frac{4 U}{t(\varepsilon - 2 U)}\)求出\(\alpha\)，将其平均值与理论值进行比较，计算相对误差
+    \end{enumerate}
+
+    \subsubsection*{变温金属电阻温度系数测量原理:}
+    变温金属电阻阻值\(R_t\)随温度的改变而不同，其电阻随温度的变化近似为：
+    \begin{equation*}
+        R_{t}=R_{0}(1+\alpha t)
+    \end{equation*}
+
+    （其中，\(R_{0}\)为变温电阻\(0^{\circ}C\)时阻值，\(\alpha\)为电阻的温度系数）。
+
+    当 B、D 处于开路状态，变温电阻从\(0^{\circ}C\)变到t时：
+    
+    令\(R_{x}=R_t\)，\(R_{1}=R_{2}=R_{3}=R_{0}\)，代入$U=\frac{R_{2} R_{x}-R_{1} R_{3}}{\left(R_{1}+R_{x} \right)\left(R_{2}+R_{3}\right)} \varepsilon$整理得：
+    \begin{equation*}
+        U=\frac{\alpha t}{4 + 2\alpha t}\varepsilon
+    \end{equation*}
+
+    由此可得：
+
+    \begin{equation*}
+        \alpha=\frac{4 U}{t(\varepsilon - 2 U)}
+    \end{equation*}
+
+    因电桥工作电源\(\varepsilon = 1.3V\)，所以只需测出U、t，即可求出变温电阻的温度系数\(\alpha\)。
+
+    \subsubsection*{描绘铜电阻 Cu50 电阻温度特性曲线\(R_t - t\)：}
+    \begin{enumerate}
+        \item 将 “功能 - 电压选择” 开关置于 “平衡 5V” 档，此时电桥进入平衡电桥工作状态；
+        \item 因电桥平衡时\(R_2R_x = R_1R_3\)，即\(R_{x}=\frac{R_{1}}{R_{2}}R_{3}\)，若\(R_1 = R_2\)，则\(R_x = R_3\)，将\(R_a\)、\(R_b\)接入\(R_1\)、\(R_2\)，\(R_c\)接入\(R_3\)；
+        \item 对铜电阻进行加温，以\(5^{\circ}C\)为间隔，待温度达到相对稳定时，按下 B、G 按钮，并迅速调节\(R_c\)使电桥平衡，此时\(R_c\)的值即为当前温度下铜电阻 Cu50 的阻值，记录\(R_c\)及其对应的温度t；
+        \item 利用实验数据作\(R_t - t\)特性曲线，由曲线求出电阻温度系数\(\alpha\)，与理论值相比计算相对误差。
+    \end{enumerate}
+
+
+    \section{实验重点}
+    
+    \xiaosi（简述本实验的学习重点，不超过100字，3分）
+
+    \begin{enumerate}
+        \item 掌握非平衡直流电桥的工作原理和测量方法；
+        \item 应用非平衡电桥测量变温金属电阻温度系数。
+    \end{enumerate}
+    
+    \section{实验难点}
+    
+    \xiaosi（简述本实验的实现难点，不超过100字，2分）
+
+    \begin{enumerate}
+        \item 实验中电阻温度变化快，读取数据应在同一时刻，否则会造成较大误差；
+        \item 应加热装置 PID 调节需反复微调，响应滞后，易超调或不达设定温，影响数据稳定性，难满足实验精度。
+    \end{enumerate}
+
+
+
+\newpage
+
+\sihao\textbf{注意事项：}
+\xiaosi
+\begin{enumerate}
+    \item  用 PDF 格式上传“实验报告”，文件名：学生姓名+学号+实验名称+周次。
+    \item  “实验报告”必须递交在“学在浙大”的本课程的对应实验项目的“作业”模块内。
+    \item  “实验报告”成绩必须在“浙江大学物理实验教学中心网站”-“选课系统”内查询。
+    \item 教学评价必须在“浙江大学物理实验教学中心网站”-“选课系统”内进行，学生必须进行教学评价，才能看到实验报告成绩，教学评价必须在本次实验结束后 3 天内进行。
+\end{enumerate}
+
+\vspace{1cm}
+\xiaosi\centering \textbf{浙江大学物理实验教学中心制}
+
+\end{document}

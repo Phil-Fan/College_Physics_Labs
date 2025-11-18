@@ -1,0 +1,334 @@
+\documentclass[10pt,a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}    % 提供方程环境
+\usepackage{physics}    % 简化向量、微分算子语法
+\newcommand{\myspace}[1]{\par\vspace{#1\baselineskip}} %自定义空一行
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{booktabs} % 添加 booktabs 宏包
+\usepackage{array}
+\pagestyle{fancy}
+\fancyhf{}  % 清除所有页眉页脚
+\fancyfoot[C]{\thepage}  % 在页脚中央设置页码
+\renewcommand{\headrulewidth}{0pt}  % 去掉页眉横线
+\renewcommand{\footrulewidth}{0pt}  % 去掉页脚横线
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{titlesec}
+
+% 重新定义section格式
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\chinese{section}、}
+  {0pt}
+  {}
+
+% 给出常用字号的自定义指令
+\newcommand{\chuhao}{\fontsize{42pt}{48pt}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{42pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{21.6pt}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{20pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{18pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{16pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{12.6pt}\selectfont}
+
+% 定义中文数字转换
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\zhnum{section}、}  % 使用\zhnum而不是\chinese
+  {0pt}
+  {}
+
+% 标题设置
+\title{\xiaochu\textbf{物理实验报告}}
+\author{}
+\date{}
+
+\begin{document}
+
+\vspace*{36pt} % 顶部空白
+
+% 居中填写区域
+\begin{center}
+    \includegraphics[width = 9cm]{head.png}
+    
+    \xiaochu\textbf{物理实验报告}
+    % 预留空白区域
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    
+    \sanhao\textbf{实验名称：\underline{\makebox[8cm]{ 示波器的使用 }}} \\[10pt]
+    \sanhao\textbf{实验桌号：\underline{\makebox[8cm]{ 29 }}} \\[10pt]
+    \sanhao\textbf{指导教师：\underline{\makebox[8cm]{ 陈水桥 }}} \\[20pt]
+    
+    % 预留空白区域
+    \myspace{7}
+    
+   \sihao\textbf{班级：\underline{\makebox[6cm]{机器人工程2402}}} \\[10pt]
+    \sihao\textbf{姓名：\underline{\makebox[6cm]{毛挺}}} \\[10pt]
+    \sihao\textbf{学号：\underline{\makebox[6cm]{3240104043}}} \\[30pt]
+    
+   \sihao\textbf{实验日期: \underline{\makebox[0.8cm] 2025 }年 \underline{\makebox[0.4cm]10}月\underline{\makebox[0.4cm]22}日  星期\underline{\makebox[0.6cm]三}上午}
+    
+    \vspace{18pt}
+    \sihao 浙江大学物理实验教学中心
+    
+\end{center}
+
+\newpage
+
+\section{预习报告}
+
+    \subsection{实验综述}
+    
+    \xiaosi （自述实验现象、实验原理和实验方法，不超过500字，5分）
+    
+    \myspace{0}
+    
+    \subsubsection*{示波管工作原理：}
+    
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=7cm]{示波器.png}
+    \caption{示波器原理图}
+    \label{fig:图1}
+    \end{wrapfigure}
+
+    示波器结构如右图所示。工作时，套在灯丝外面的阴极因受热发出大量电子，在电场作用下，电子通过控制栅极和阳极的小孔，高速射向荧光屏，荧光物质在电子轰击下发出荧光，屏上呈现一个亮点。在两块 Y（或 X）偏转板间加上电压时，电子束受电场力作用发生偏转，使荧光屏亮点位移，且亮点偏转位移与加在偏转板间的电压成正比（Y 轴、X 轴电压需放大）。
+    
+    \subsubsection*{波形扫描原理：}
+
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=7cm]{波形扫描原理.png}
+    \caption{波形扫描原理}
+    \label{fig:图2}
+    \end{wrapfigure}
+
+    在 X 轴水平偏转板上加上如右图所示的扫描电压，光点在水平方向从左到右匀速运动，因人眼视觉暂留作用，Y 轴电压信号引发的偏移沿水平轴展开。当扫描电压周期\(T_x\)与 Y 轴电压周期\(T_y\)满足\(T_x = nT_y\)（\(n = 1,2,3,\dots\)）时，各次扫描结果重叠，荧光屏显示清晰稳定波形；当\(T_y > T_x\)时，波形向右移动；当\(T_y < T_x\)时，波形向左移动。
+    
+    \subsubsection*{李萨如图形:}
+    若在示波器 X 轴和 Y 轴都输入正弦变化电压信号，两信号频率\(f_y\)和\(f_x\)相同或成简单整数比，电子束振动为两个相互垂直谐振动的合振动，荧光屏描绘出合振动图形即李萨如图形。理论推导得\(f_y:f_x = N_x:Ny\)，其中\(N_y\)、\(N_x\)分别是 Y 方向与 X 方向一条直线与李萨如图形相交的最多交点个数或相切的最少切点个数，故李萨如图形可测未知信号频率。且\(f_y\)和\(f_x\)比越接近整数比，图形越稳定，反之越不稳定。
+    因电桥工作电源\(\varepsilon = 1.3V\)，所以只需测出U、t，即可求出变温电阻的温度系数\(\alpha\)。
+
+    \subsubsection*{电压的测量:}
+    \begin{enumerate}
+        \item \textbf{直接测量法：}旋转 CH1 或 CH2 的 VOLTS/DIV，选择偏转因数，数值 D 显示在屏左下方，调节上下位置移动旋钮，使波形移动到某固定位置，读出正弦波峰 - 峰值高度 h，代入公式求出\(U_{P-P}\)；        
+        \item \textbf{光标测量法：}按下 “u-t-OFF” 选择 U，屏上出现上下平行两条水平光标。按下 TRIG/C2，选择其中一条水平光标，旋转或按动面板左上角 “FUNCTION” 按钮，使光标到所需位置，再按下 TRIG/C2，选择另一条光标到所需位置，两光标间距显示在屏幕下方，即为\(U_{P-P}\)大小。    
+    \end{enumerate}
+
+    \subsubsection*{频率或周期的测量:}
+
+    \begin{enumerate}
+        \item \textbf{直接测量法：}旋转 TIME/DIV，选择适当的时基因素，测出信号周期占有格数 g，算出周期 T；        
+        \item \textbf{光标测量法：}按下 “u-t-OFF” 选择 t，屏上出现左右平行两条垂直光标，类比电压测量方法测量周期 T。
+    \end{enumerate}
+
+    \subsubsection*{用比较法验证\(f_y = nf_x\):}
+
+    从信号发生器输出 50Hz 的标准信号，作为 Y 信号输入示波器 CH2 接口；从信号发生器输出一频率可调节的信号作为 X 信号接入 CH1 接口。调节示波器至 “X-Y” 工作状态，改变信号发生器输出频率至 50、100Hz 左右，仔细调节直至出现稳定图形，由\(f_y:f_x = N_x:N_y\)计算出\(f_y\)。
+
+    \subsubsection*{用李萨如图形测量未知信号的频率：}
+
+    将信号发生器输出接到电路输入端，同时将示波器 CH1 接电路输入端，CH2 接电路输出端，观察输入、输出两端波形。示波器操作步骤：将示波器置于 “DC” 状态，调信号发生器的输出信号；测量 CH1 信号峰 - 峰值\(U_{1P-P}\)；测量 CH2 的半波信号的峰值\(U_{2P}\)，则\((\frac{U_{1P-P}}{2} - U_{2P})\)为正向导通电压。
+
+    \subsubsection*{二极管正向导通电压测量：}
+
+    \subsubsection*{相位差的测量：}
+
+    信号发生器输出端接到电路的输入端，示波器的CH1接电路输入端，而CH2接到电路的输出端，测出因电容而落后的相位差。示波器操作步骤如下：将示波器置于“A”状态，调节信号发生器输出信号，测量正弦波一个周期所占的距离$x$值，测量$x_1$值，代入公式：相位差=$\frac{x_1}{x} \cdot 360°, 
+    \left\{\begin{array}{l}
+        x_1\text{：x方向上两波形起点的间距}\\
+        x\text{：x方向上一个周期所占距离}
+    \end{array}\right.$
+
+    \subsection{实验重点}
+    
+    \xiaosi（简述本实验的学习重点，不超过100字，3分）
+
+    \begin{enumerate}
+        \item 从物理学角度了解示波器的结构和工作原理；
+        \item 熟悉示波器面板各旋钮的功能，进而掌握示波器的调节和使用方法；学习用示波器观察信号波形，并测量其幅度大小、周期及相位差；
+        \item 掌握用李萨如图形测量正弦波信号频率的原理和方法；
+        \item 学习示波器在进行一些应用性电路的测量中的使用方法。
+    \end{enumerate}
+    
+    \subsection{实验难点}
+    
+    \xiaosi（简述本实验的实现难点，不超过100字，2分）
+
+    \begin{enumerate}
+        \item 李萨如图形调节难，信号发生器精度有限致图形难稳定，且交点 / 切点计数易因主观判断或图形模糊出偏差，影响频率计算；
+        \item 波形同步调节不易，需精准匹配时基与信号频率，触发电平调节不当还会让波形左右移动或失真，需反复尝试；
+        \item 光标法测量难精准，波形宽度使光标难对齐波峰波谷，相位差测量中两次光标定位误差还会叠加，放大最终误差。
+    \end{enumerate}
+
+
+\section{原始数据}
+
+    \xiaosi （将有老师签名的“自备数据记录草稿纸”的扫描或手机拍摄图粘贴在下方，20分）
+    
+    \
+
+    \textbf{见下页。}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=18cm]{实验数据.jpg}
+        \caption{实验数据}
+        \label{fig:图3}
+    \end{figure}
+
+    
+\section{结果与分析}
+
+    \subsection{数据处理与结果}
+    \xiaosi （列出数据表格、选择数据处理方法、给定测量或计算结果，30分）
+
+    \subsubsection*{比较法验证\(f_y = nf_x\)}
+
+    在扫描时基信号 0.5ms/div 条件下，\(f_{x0}=200Hz\)，测得数据如下：
+    % 这是一个完整的、可浮动的表格环境
+    \begin{table}[htbp]
+        \centering % 让表格居中显示
+        \caption{比较法验证\(f_y = nf_x\)关系} % 表格的标题
+        \label{tab:resistance_data} % 表格的标签，用于交叉引用
+        \begin{tabular}{*{7}{c}} % 定义表格有7列，每一列都居中(c)
+            \toprule % 画出顶部的粗横线 (来自 booktabs)
+            波形个数n & 1 & 2 & 3 & 4 & 5 & 6 \\
+            \midrule % 画出中间的分割线 (来自 booktabs)
+            温度$f_y/Hz$ & 200.60 & 403.2 & 606.9 & 806.4 & 1007.9 & 1202.4 \\
+            计算$f_x/Hz$ & 200.60 & 201.60 & 202.30 & 201.60 & 201.58 & 200.40 \\
+            \bottomrule % 画出底部的粗横线 (来自 booktabs)
+        \end{tabular}
+    \end{table}
+
+    由上述数据，可得：
+    \begin{align*}
+        \overline{f_x} &= 201.60Hz , & U_a(f_x) = \sqrt{\frac{1}{5\times 6}\sum_{1}^{6}(f_xi - \overline{f_x})^2} = 0.27Hz
+    \end{align*}
+    则：
+    \begin{align*}
+        f_x &= \overline{f_x} \pm  U_A(f_x) = 201.60 \pm 0.27Hz , & E_{f_x} = \frac{|\overline{f_x}-f_{x0}|}{f_{x0}} \times 100\% = 0.8\%
+    \end{align*}
+
+    \subsubsection*{用李萨如图形测量信号频率（\(f_{y0}=50Hz\)）}
+
+    \begin{table}[htbp]
+        \centering % 让表格居中显示
+        \caption{不同$f_y:f_x$下的信号对比} % 表格的标题
+        \label{tab:resistance_data} % 表格的标签，用于交叉引用
+        \begin{tabular}{*{7}{c}} % 定义表格有7列，每一列都居中(c)
+            \toprule % 画出顶部的粗横线 (来自 booktabs)
+            $f_y:f_x$ & 1:1 & 1:2 & 1:3 & 2:1 & 2:3 & 3:1 \\
+            \midrule % 画出中间的分割线 (来自 booktabs)
+            图形 & \includegraphics[width=60pt]{1：1.jpg}  &
+            \includegraphics[width=60pt]{1：2.jpg}   &
+            \includegraphics[width=60pt]{1：3.jpg}   &
+            \includegraphics[width=60pt]{2：1.jpg}   &
+            \includegraphics[width=60pt]{2：3.jpg}   &
+            \includegraphics[width=60pt]{3：1.jpg}  \\
+            $ N_y $ & 2 & 4 & 6 & 2 & 6 & 2 \\
+            $ N_x $ & 2 & 2 & 2 & 4 & 4 & 6 \\
+            $ f_x/Hz $ & 49.993 & 100.100 & 150.308 & 25.010 & 75.090 & 16.680 \\
+            $ f_y = f_x \cdot \frac{f_x}{f_y} $ & 49.993 & 50.050 & 50.103 & 50.020 & 50.060 & 50.040 \\
+            \bottomrule % 画出底部的粗横线(来自 booktabs)
+        \end{tabular}
+    \end{table}
+
+    由上述数据，可得：
+    \begin{align*}
+        \overline{f_y} &= 50.066Hz , & U_a(f_y) = \sqrt{\frac{1}{5\times 6}\sum_{1}^{6}(f_yi - \overline{f_y})^2} = 0.033Hz
+    \end{align*}
+    则：
+    \begin{align*}
+        f_y &= \overline{f_y} \pm  U_A(f_y) = 50.066 \pm 0.033Hz , & E_{f_y} = \frac{|\overline{f_y}-f_{y0}|}{f_{y0}} \times 100\% = 0.022\%
+    \end{align*}
+
+    \subsubsection*{二极管正向导通电压测量}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=.35\textwidth]{二极管测量.jpg}
+        \caption{测量时示波器显示图形}
+        \label{fig:图4}
+    \end{figure}
+
+    利用光标法，测得输入数据信号峰值\(U_{1P-P}=4.96V\)，输出信号峰峰值$ U_{2p} = 1.84V $，则正向导通电压为\((\frac{U_{1P-P}}{2}-U_{2P})=0.64V\)。
+
+    \subsubsection*{相位差的测量}
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=.35\textwidth]{相位差测量.jpg}
+        \caption{测量时示波器显示图形}
+        \label{fig:图4}
+    \end{figure}
+
+
+    利用光标法：测得输入信号一个周期\(T = 9.92ms\)，输入输出波形峰值时间差最小值\(\Delta t = 0.44ms\)，则相位差\(\Delta\varphi=\frac{\Delta t}{T}×360^{\circ}=15.96^{\circ}\)。
+    
+    \subsection{误差分析}
+    \xiaosi （运用测量误差、相对误差、不确定度等分析实验结果，20分）
+
+    \myspace{1}
+
+    \begin{enumerate}
+        \item 由于波形存在一定宽度，使用光标法测量电压或时间存在一定误差，此误差可通过将波形调细来减小；
+        \item 实验 “用李萨如图形测量信号频率” 中，因信号发生器精度有限，难以使李萨如图形保持稳定，且信号发生器不够稳定，有时调节到接近稳定状态后，李萨如图形突然又开始较快翻转，造成一定误差；
+        \item 信号发生器输出信号并非始终严格与预设信号相等，存在小范围浮动，为测量带来一定误差；
+        \item 调整波形个数恰好为整数个、李萨如图形至最稳定状态，以及光标与待测对象对齐等判断存在一定主观性，为测量带来误差。
+    \end{enumerate}
+
+    \subsection{实验探讨}
+    \xiaosi （对实验内容、现象和过程的小结，不超过100字，10分）
+
+    \myspace{1}
+    本次实验学习了示波器的多种使用方法，并完成了 “比较法验证\(f_y = nf_x\)”“李萨如图形测量信号频率”“二极管正向导通电压的测量”“相位差的测量” 等多个分实验，整体综合性较强，很好地锻炼了动手操作能力，本次实验也为后续其他实验打好了基础。
+
+
+\section{思考题}
+
+    \xiaosi （解答教材或讲义或老师布置的思考题，10分）
+
+    \subsubsection*{示波器为什么能显示被测信号的波形？}
+    
+    答：示波器阴极因受热而发出电子，经电场加速后高速射向荧光屏，显现亮点。若在两块 Y（或 X）偏转板上加上电压，电子束在偏转电场中发生偏转。若施加交变正弦电压，电子偏转的位移会随电压变化而相应变化，从而显现波形。
+    
+    \subsubsection*{在观察李萨如图形时，为什么它总是不断地来回翻转，翻转快慢受什么因素影响？}
+    
+    答：李萨如图形不停翻转是因为\(f_x\)、\(f_y\)不能成严格的整数倍关系，且信号的相位差在不断改变；翻转的快慢即相位差改变的快慢，取决于\(f_x\)、\(f_y\)实际的倍数关系与整数倍关系的差值。    
+
+    \subsubsection*{切实理解示波器同步的概念，如果发生波形左移或右移多时，应如何调整才能使其稳定下来？}
+
+    答：示波器同步是指示波器的扫描信号与被测信号同步，它们的频率存在整数倍关系；用 TRIG LEVEL 调节锯齿脉冲的电压大小和周期，使其能稳定下来。
+    
+\newpage
+
+\sihao\textbf{注意事项：}
+\xiaosi
+\begin{enumerate}
+    \item  用 PDF 格式上传“实验报告”，文件名：学生姓名+学号+实验名称+周次。
+    \item  “实验报告”必须递交在“学在浙大”的本课程的对应实验项目的“作业”模块内。
+    \item  “实验报告”成绩必须在“浙江大学物理实验教学中心网站”-“选课系统”内查询。
+    \item 教学评价必须在“浙江大学物理实验教学中心网站”-“选课系统”内进行，学生必须进行教学评价，才能看到实验报告成绩，教学评价必须在本次实验结束后 3 天内进行。
+\end{enumerate}
+
+\vspace{1cm}
+\xiaosi\centering \textbf{浙江大学物理实验教学中心制}
+
+\end{document}

@@ -1,0 +1,329 @@
+\documentclass[10pt,a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}    % 提供方程环境
+\usepackage{amssymb} 
+\usepackage{physics}    % 简化向量、微分算子语法
+\newcommand{\myspace}[1]{\par\vspace{#1\baselineskip}} %自定义空一行
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{booktabs} % 添加 booktabs 宏包
+\usepackage{float}
+\pagestyle{fancy}
+\fancyhf{}  % 清除所有页眉页脚
+\fancyfoot[C]{\thepage}  % 在页脚中央设置页码
+\renewcommand{\headrulewidth}{0pt}  % 去掉页眉横线
+\renewcommand{\footrulewidth}{0pt}  % 去掉页脚横线
+% hyperref 已在上方加载一次，避免重复加载
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{titlesec}
+
+% 重新定义section格式
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\chinese{section}、}
+  {0pt}
+  {}
+
+% 给出常用字号的自定义指令
+\newcommand{\chuhao}{\fontsize{42pt}{48pt}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{42pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{21.6pt}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{20pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{18pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{16pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{ 10.5pt}{12.6pt}\selectfont}
+
+% 定义中文数字转换
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\zhnum{section}、}  % 使用\zhnum而不是\chinese
+  {0pt}
+  {}
+
+% 标题设置
+\title{\xiaochu\textbf{物理实验报告}}
+\author{}
+\date{}
+
+\begin{document}
+
+\vspace*{36pt} % 顶部空白
+
+% 居中填写区域
+\begin{center}
+    \includegraphics[width = 9cm]{head.png}
+    
+    \xiaochu\textbf{物理实验报告}
+    % 预留空白区域
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    
+    \sanhao\textbf{实验名称：\underline{\makebox[8cm]{ 棱镜偏向角特性 }}} \\[10pt]
+    \sanhao\textbf{实验桌号：\underline{\makebox[8cm]{ 14 }}} \\[10pt]
+    \sanhao\textbf{指导教师：\underline{\makebox[8cm]{ 谢东洋 }}} \\[20pt]
+    
+    % 预留空白区域
+    \myspace{7}
+    
+   \sihao\textbf{班级：\underline{\makebox[6cm]{机器人工程2402}}} \\[10pt]
+    \sihao\textbf{姓名：\underline{\makebox[6cm]{毛挺}}} \\[10pt]
+    \sihao\textbf{学号：\underline{\makebox[6cm]{3240104043}}} \\[30pt]
+    
+    \sihao\textbf{实验日期: \underline{\makebox[0.8cm]{2025}}年 \underline{\makebox[0.4cm]{11}}月\underline{\makebox[0.4cm]{12}}日  星期\underline{\makebox[0.6cm]{三}}上午}
+    
+    \vspace{18pt}
+    \sihao 浙江大学物理实验教学中心
+    
+\end{center}
+
+\newpage
+
+\section{预习报告}
+
+
+    \subsection{实验综述}  
+
+    \xiaosi （自述实验现象、实验原理和实验方法，不超过500字，5分）
+
+
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=8cm]{棱镜偏向角.png}
+    \caption{最小偏向角原理}
+    \label{fig:principle}
+    \end{wrapfigure}
+
+    \
+
+    \subsubsection*{三棱镜顶角测量原理:}
+    三棱镜测量原理在“分光计调整与使用”实验中学习，\(\angle A = \frac{|t_{\text{左}I}-t_{\text{右}I}|+|t_{\text{左}II}-t_{\text{右}II}|}{4}\)
+
+    \subsubsection*{自最小偏向角原理:}
+
+    如图所示，旋转载物台，使光学面 AC 与平行光管射来的光垂直，平行光管发出的平行光射向三棱镜的光学面 AB，经三棱镜光学面 AC 折射出来，望远镜从毛玻璃面 BC 底边出发，逆时针方向旋转，就会看到清晰的汞色单色系列光，说明已经找到折射光路。
+    此时再转动载物台，观察该汞单色偏向角的变化，如果向左移动，偏向角$\delta $变小，继续慢慢转动载物台直到汞单色光到达某一位置时突然向左转动，使偏向角$\delta $变大，此转折点即为该单色光的最小偏向角位置。把望远镜对准这个转折位置，并记录此时分光计两游标的读数为\(\theta_{minI}\)和\(\theta_{minII}\)，然后移去三棱镜，使望远镜对准入射光（平行光管位置），读取两游标的读数为\(\theta_{0I}\)和\(\theta_{0II}\)，则最小偏向角为\(\delta_{min}=\frac{1}{2}(|\theta_{minI}-\theta_{0I}| + |\theta_{minII}-\theta_{0II}|)\)。
+    
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=8cm]{折射率测量.png}
+    \caption{折射率测量光路图}
+    \label{fig:principle}
+    \end{wrapfigure}
+
+    \
+
+    \subsubsection*{折射率测量原理：}
+
+    一平行的单色光从三棱镜的一个光学面 AB 入射，经折射后从另一个光学面 AC 射出，如右图所示。入射光和 AB 面法线的夹角为入射角$i$，出射光和 AC 面法线的夹角为出射角\(i'\)，入射光和出射光的夹角\(\delta\)就是偏向角。由几何关系知，\(\delta=(i - r)+(i' - r')\)，当$i = i'$时，由折射定律有$r = r' $，得\(\delta_{min}=2(i - r)\)。
+    
+    又因为\(r + r' = 2r = \pi -(\pi - \angle A) = \angle A\)
+
+    所以
+    
+    \begin{align*}
+        i=\frac{A + \delta_{min}}{2}, n=\frac{sin i}{sin r}=\frac{sin \frac{A + \delta_{min}}{2}}{sin \frac{A}{2}}
+    \end{align*}
+    
+    
+    因此，只要测出三棱镜顶角A和汞灯单色光入射的最小偏向角\(\delta_{min}\)，就可计算出三棱镜对该单色入射光的折射率。
+    
+    
+
+    \subsubsection*{分光计的调整：}
+
+    按照 “分光计的调整与使用” 实验中的操作步骤，完成对分光计的调整。
+
+    
+    \subsubsection*{反射法测量三棱镜顶角：}
+    
+    按照 “分光计的调整与使用” 实验中的操作步骤，使用反射法完成对三棱镜顶角的测量。
+
+    \subsubsection*{测定三棱镜对汞灯单色光 $\lambda = 546.0nm $（绿光）的最小偏向角}
+    
+    按要求放置好三棱镜，转动载物台，改变入射角，获得最小偏向角，
+    记录分光计两游标的读数为\(\theta_{minI}\)和\(\theta_{minII}\)，然后移去三棱镜，望远镜对准入射光（平行光管位置），
+    读取游标的读数为\(\theta_{0I}\)和\(\theta_{0II}\)，代入\(\delta_{min}=\frac{1}{2}(|\theta_{minI}-\theta_{0I}| + |\theta_{minII}-\theta_{0II}|)\)计算出最小偏向角。
+
+    \subsubsection*{计算三棱镜对各单色光的折射率以及绘制色散曲线：}
+
+    分别测量各单色光的最小偏向角，利用已经测出的三棱镜顶角值，即可由\(n=\frac{sin i}{sin r} =\frac{sin \frac{A + \delta_{min}}{2}}{sin \frac{A}{2}}\)计算出棱镜对各单色光的折射率，制作$n-\lambda $关系曲线（色散曲线）。
+
+    \subsection{实验重点}
+
+    \xiaosi（简述本实验的学习重点，不超过100字，3分）
+
+
+    \begin{enumerate}   
+        \item 进一步熟悉分光计的调整方法；
+        \item 测量三棱镜顶角，观察汞灯色散现象；
+        \item 掌握最小偏向角的测量方法；
+        \item 测定棱镜玻璃对汞灯各单色光的折射率。
+
+    \end{enumerate}  
+    
+    
+    \subsection{实验难点}
+    
+    \xiaosi（简述本实验的实现难点，不超过100字，2分）
+
+    \begin{enumerate}    
+        \item 分光计调平要求高，载物台难完全水平，影响光路精度；
+        \item 最小偏向角转折点光线移动缓，主观判断易有偏差；
+        \item 刻度盘读数时，游标与刻度线对齐的判断存在主观性误差；
+        \item 三棱镜的顶角应接近平台中心偏上的位置，否则难观察反射光，影响顶角测量。
+    \end{enumerate}  
+
+
+\section{原始数据}
+
+    \xiaosi （将有老师签名的“自备数据记录草稿纸”的扫描或手机拍摄图粘贴在下方，20分）
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=16cm]{实验数据.jpg}
+        \caption{实验数据}
+        \label{fig:图2}
+    \end{figure}
+
+    
+\section{结果与分析}
+
+    \subsection{数据处理与结果}
+    \xiaosi （列出数据表格、选择数据处理方法、给定测量或计算结果，30分）
+    
+    \
+
+        % 注意：编译此表格需要您的文档已包含 \usepackage{ctex} (或 \usepackage[UTF8]{ctex}) 和 \usepackage{amsmath}
+        \textbf{对于绿光偏向角数据处理：}
+
+        \begin{align*}
+        U_{A\text{绿}}&=\sqrt{\frac{1}{6(6 - 1)}\sum_{i = 1}^{n}(\delta_{min_i}-\overline{\delta_{min}})^2}=0.01608^{\circ} \\
+        U_{B\text{绿}}&=\frac{1}{\sqrt{3}}\times\frac{1'}{60} = 0.00962^{\circ} \\
+        \therefore  U_{\text{绿}}&=\sqrt{U_{A\text{绿}}^2 + U_{B\text{绿}}^2}=0.018735^{\circ}\approx1'7'' \\
+        \therefore \delta_{\text{绿}}&=51^{\circ}33'50''\pm1'7'' 
+        \end{align*}
+
+        \textbf{对于绿光折射率数据处理：}
+
+        \begin{center}
+            各次测量下的绿光折射率由公式 $n=\frac{sin \frac{A + \delta_{min}}{2}}{sin \frac{A}{2}}$ 计算得出
+        \end{center}
+        \begin{align*}
+        \overline{n_{\text{绿}}}&= \frac{1}{6} \sum_{i=1}^{6} n_i = 1.65543 \\
+        u_{n}&=\sqrt{\frac{1}{6(6 - 1)}\sum_{i = 1}^{n}(n_i-\overline{n})^2}=4.72\times10^{-5} \\
+        \therefore n_{\text{绿}} &= 1.65543 \pm5\times10^{-5}
+        \end{align*}
+
+        \textbf{列出不同单色光与$\delta $与$\lambda$随$\lambda$变化关系表格：}
+
+        \begin{table}[htbp]
+            \centering
+            \label{tab:bridge_custom}
+            \begin{tabular}{cccc}
+                \toprule
+                波长 /nm & $\angle A$ & $\delta_{min}$ & 折射率n\\
+                \midrule
+                577.1（黄光） & $60^\circ$ & \(51^{\circ}16'30''\) & 1.6520 \\
+                546.0（绿光） & $60^\circ$ & \(51^{\circ}33'50''\) & 1.6544\\
+                435.8（蓝光） & $60^\circ$ & \(53^{\circ}39'30''\) & 1.6734 \\
+                404.7（紫光） & $60^\circ$ & \(54^{\circ}46'30''\) & 1.6846\\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+
+        \vspace{5cm}
+
+        \textbf{绘制色散曲线（$n-\lambda $曲线），并用色散经验公式拟合得到下图：}
+
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=15cm]{nonlinear_fit_chart.jpg}
+        \caption{拟合$n-\lambda $曲线}
+        \label{fig:图3}
+        \end{figure}  
+
+    \subsection{误差分析}
+    \xiaosi （运用测量误差、相对误差、不确定度等分析实验结果，20分）
+    
+    \begin{enumerate}
+        \item 载物台难以完全调平，使光路与理论光路产生了一定偏差，对最终结果带来影响；
+        \item 在寻找最小偏向角的过程中，光线在转折点附近移动很缓慢，人的主观性对最小偏向角位置的选取存在影响；
+        \item 在刻度盘上读数时，判断游标与刻度线对齐时存在主观性，产生读数误差。
+    \end{enumerate}
+
+    以上误差总体较小，实验结果中,计算得出的不确定度仅为\(1'7''\)，本实验结果较为精确。
+    
+    
+    \subsection{实验探讨}
+    \xiaosi （对实验内容、现象和过程的小结，不超过100字，10分）
+
+    \myspace{1}
+
+    通过本次实验，我熟练掌握了分光计调整、三棱镜顶角与最小偏向角测量及折射率计算方法。实验中，精准调平分光计、找准最小偏向角转折点是关键，需耐心细致操作。这让我体会到，物理实验的精度依赖规范操作与严谨态度，主观判断易引入误差，需多次测量减小偏差。同时，色散曲线的绘制让我直观理解了折射率与波长的关系，深化了对光学原理的认知，也提升了数据处理与分析能力。
+
+        
+    \section{思考题}
+
+    \xiaosi （解答教材或讲义或老师布置的思考题，10分）
+
+    \subsubsection*{光线经三棱镜折射时，出射角\(i'\)与入射角i满足什么关系时，偏向角\(\delta\)有最小值，写出证明过程。}
+
+    证明：
+
+    假设三棱镜截面是等边三角形，由斯聂耳定律：
+    \begin{center}
+        \(n sin r_1 = sin i_1 ，n sin r_2 = sin i_2 \)
+    \end{center}
+
+    由几何关系， 
+    \begin{center}
+        $A = r_1 + r_2 $ \\
+        $\delta = i_1 + i_2 - A = arcsin(n sin r_1) + arcsin(n sin(A - r_1)) - A $
+    \end{center}
+    
+    对\(r_1\)求导：
+
+    \begin{align*}
+    \frac{d\delta}{dr_1}&=\frac{n cos r_1}{\sqrt{1 - n^2 sin^2 r_1}}+\frac{-n cos(A - r_1)}{\sqrt{1 - n^2 sin^2(A - r_1)}} \\
+    &=\sqrt{\frac{n^2 - n^2 sin^2 r_1}{1 - n^2 sin^2 r_1}}-\sqrt{\frac{n^2 - n^2 sin^2(A - r_1)}{1 - n^2 sin^2(A - r_1)}} \\
+    &\triangleq f(r_1)-f(A - r_1)
+    \end{align*}
+
+    由函数性质可知，\(f(r)\)单调递增，所以\(\triangleq f(r_1)-f(A - r_1)\)单调递增。
+    
+    当\(\frac{d\delta}{dr_1}=0\)时，\(f(r_1)=f(A - r_1)\)，即\(r_1 = A - r_1\)，故\(r_1 = r_2=\frac{A}{2}\)。
+    
+    此时\(i_1 = i_2 = arcsin(n sin\frac{A}{2})\)，偏向角\(\delta_{min}=2arcsin(n sin\frac{A}{2})\)，即偏向角取得最小值。
+    
+    证毕。
+    
+
+\newpage
+
+\sihao\textbf{注意事项：}
+\xiaosi
+\begin{enumerate}
+    \item  用 PDF 格式上传“实验报告”，文件名：学生姓名+学号+实验名称+周次。
+    \item  “实验报告”必须递交在“学在浙大”的本课程的对应实验项目的“作业”模块内。
+    \item  “实验报告”成绩必须在“浙江大学物理实验教学中心网站”-“选课系统”内查询。
+    \item 教学评价必须在“浙江大学物理实验教学中心网站”-“选课系统”内进行，学生必须进行教学评价，才能看到实验报告成绩，教学评价必须在本次实验结束后 3 天内进行。
+\end{enumerate}
+
+\vspace{1cm}
+\xiaosi\centering \textbf{浙江大学物理实验教学中心制}
+
+\end{document}

@@ -1,0 +1,317 @@
+\documentclass[10pt,a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}    % 提供方程环境
+\usepackage{physics}    % 简化向量、微分算子语法
+\newcommand{\myspace}[1]{\par\vspace{#1\baselineskip}} %自定义空一行
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{booktabs} % 添加 booktabs 宏包
+\pagestyle{fancy}
+\fancyhf{}  % 清除所有页眉页脚
+\fancyfoot[C]{\thepage}  % 在页脚中央设置页码
+\renewcommand{\headrulewidth}{0pt}  % 去掉页眉横线
+\renewcommand{\footrulewidth}{0pt}  % 去掉页脚横线
+% hyperref 已在上方加载一次，避免重复加载
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{titlesec}
+
+% 重新定义section格式
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\chinese{section}、}
+  {0pt}
+  {}
+
+% 给出常用字号的自定义指令
+\newcommand{\chuhao}{\fontsize{42pt}{48pt}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{42pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{21.6pt}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{20pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{18pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{16pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{ 10.5pt}{12.6pt}\selectfont}
+
+% 定义中文数字转换
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\zhnum{section}、}  % 使用\zhnum而不是\chinese
+  {0pt}
+  {}
+
+% 标题设置
+\title{\xiaochu\textbf{物理实验报告}}
+\author{}
+\date{}
+
+\begin{document}
+
+\vspace*{36pt} % 顶部空白
+
+% 居中填写区域
+\begin{center}
+    \includegraphics[width = 9cm]{head.png}
+    
+    \xiaochu\textbf{物理实验报告}
+    % 预留空白区域
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    
+    \sanhao\textbf{实验名称：\underline{\makebox[8cm]{ 示波器的调整和使用 }}} \\[10pt]
+    \sanhao\textbf{实验桌号：\underline{\makebox[8cm]{ 10 }}} \\[10pt]
+    \sanhao\textbf{指导教师：\underline{\makebox[8cm]{ 杨瀚城 }}} \\[20pt]
+    
+    % 预留空白区域
+    \myspace{7}
+    
+   \sihao\textbf{班级：\underline{\makebox[6cm]{机器人工程2402}}} \\[10pt]
+    \sihao\textbf{姓名：\underline{\makebox[6cm]{毛挺}}} \\[10pt]
+    \sihao\textbf{学号：\underline{\makebox[6cm]{3240104043}}} \\[30pt]
+    
+    \sihao\textbf{实验日期: \underline{\makebox[0.8cm]{2025}}年 \underline{\makebox[0.4cm]{10}}月\underline{\makebox[0.4cm]{29}}日  星期\underline{\makebox[0.6cm]{四}}上午}
+    
+    \vspace{18pt}
+    \sihao 浙江大学物理实验教学中心
+    
+\end{center}
+
+\newpage
+
+\section{预习报告}
+
+
+    \subsection{实验综述}  
+
+    \xiaosi （自述实验现象、实验原理和实验方法，不超过500字，5分）
+
+
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=8cm]{分光计.png}
+    \caption{分光计原理}
+    \label{fig:principle}
+    \end{wrapfigure}
+
+    \
+
+    \subsubsection*{反射法测量三棱镜棱角原理:}
+    三棱镜中相邻两个光学平面之间的夹角称为棱角（顶角）。用一束平行光射到三棱镜的棱角（如右图所示），光线 1 经 AB 面反射，光线 2 经 AC 面反射，两反射光线的夹角为$ \alpha $，两反射光线的夹角$\alpha $与棱角 A 的关系可由几何光学求得:
+
+    设两读数窗为I窗和II窗，当望远镜在右边时，读得两窗读数为： $ \angle \text{右}_I$   和 $ \angle \text{右}_{II} $ ；
+    同理，当望远镜在左边时，读得两窗读数为： $ \angle \text{左}_{I} $ 和 $ \angle \text{左}_{II} $ 。
+    则： $ \alpha_I = \angle \text{右}_{I} - \angle \text{左}_{I} $ ，$ \alpha_{II} = \angle \text{右}_{II} - \angle \text{左}_{II} $。为了消除仪器的偏心差，取 $ \varphi  = \frac{\varphi_{1}+\varphi_{2}}{2} $ ，
+    故棱角 $ \angle A$ 的计算公式：$\angle A = \frac{| \angle \text{右}_{I} - \angle \text{左}_{I} | + | \angle \text{右}_{II} - \angle \text{左}_{II} |}{4} $ 。
+
+    \subsubsection*{自准直法测量原理:}
+
+    在载物平台上放一镜面垂直于望远镜光轴的平面反射镜，调节亮十字与物镜之间的距离（即调焦）。如果亮十字恰好处于物镜的焦平面上，那么亮十字上任意一点发出的光经物镜变为平行光，此平行光由反射镜反射回来，经物镜后所成亮十字像应准确地处在亮十字所在平面上。因此在调焦过程中，只要在亮十字所在平面上看到反射回来的清晰亮十字像时，望远镜已调焦至无穷远，这种调焦方法称为自准直法，光路如下图所示：
+
+     \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=8cm]{光路图.png}
+        \caption{调焦光路图}
+    \label{fig:optics}
+    \end{figure}
+
+
+    \subsubsection*{分光计的调整：}
+
+    保证入射光线是平行光，望远镜能接收平行光，平行光管和望远镜的光轴与分光计中心轴垂直。
+
+    \textbf{(1)粗调：} 用目测法调节望远镜倾斜度调节螺钉，使望远镜光轴基本与分光计中心轴垂直。
+
+    \textbf{(2)望远镜调焦至无穷远：}
+        
+    平面镜置于载物平台；
+
+    调节目镜直至看清 “丰” 形叉丝；
+
+    调节望远镜倾斜螺钉直至找到亮十字像为止；
+        
+    调节调焦螺钉直至看见清晰亮十字，并使亮十字像与 “丰” 形叉丝上刻线重合。
+
+    \textbf{(3)调整望远镜光轴、载物平台面分别与分光计中心转轴垂直：}
+
+    调节载物台三只倾斜度调节螺钉中的两只，使反光镜两面反射的亮十字像重合于 “丰” 形叉丝的上刻线；
+
+    将反光镜置于与载物台某两脚连线平行的平台面直径上，调节第三只螺钉，使亮十字像与 “丰” 形叉丝上刻线重合。
+
+   \textbf{(4)调整平行光管光轴与分光计中心轴垂直。}
+
+    
+    \subsubsection*{测量三棱镜棱角：}
+    
+    将三棱镜置于载物台，顶角对准平行光管的中心，且顶角应接近平台中心略偏上的位置，测量左右两反射光线的角位置，每次测量稍改变顶角接近平台中心的位置。
+
+    
+    \subsection{实验重点}
+
+    \xiaosi（简述本实验的学习重点，不超过100字，3分）
+
+
+    \begin{enumerate}   
+        \item 了解分光计的结构；
+        \item 学会正确的分光计调节和使用方法；
+        \item 利用分光计测量三棱镜的底角（顶角）。
+
+    \end{enumerate}  
+    
+    
+    \subsection{实验难点}
+    
+    \xiaosi（简述本实验的实现难点，不超过100字，2分）
+
+    \begin{enumerate}    
+        \item 若目测望远镜或载物平台明显不水平，在望远镜中将难以找到绿色十字像；
+        \item 实验时需要对望远镜进行自准调焦，使得绿色十字像处于最清晰状态；
+        \item 实验过程中，望远镜和载物平台调整好后，它们的倾斜调节螺钉都不可再随意转动；
+        \item 三棱镜的顶角应接近平台中心偏上的位置，否则在望远镜中将难以看到反射光；
+    \end{enumerate}  
+
+
+\section{原始数据}
+
+    \xiaosi （将有老师签名的“自备数据记录草稿纸”的扫描或手机拍摄图粘贴在下方，20分）
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=16cm]{实验数据.jpg}
+        \caption{实验数据}
+        \label{fig:图2}
+    \end{figure}
+
+    
+\section{结果与分析}
+
+    \subsection{数据处理与结果}
+    \xiaosi （列出数据表格、选择数据处理方法、给定测量或计算结果，30分）
+
+        % 注意：编译此表格需要您的文档已包含 \usepackage{ctex} (或 \usepackage[UTF8]{ctex}) 和 \usepackage{amsmath}
+        \begin{table}[htbp]
+            \centering
+            \caption{三棱镜测量数据}
+            \label{tab:bridge_custom}
+            \begin{tabular}{cccccccc}
+                \toprule
+                \multirow{2}{*}{实验次数} & \multicolumn{2}{c}{左} & \multicolumn{2}{c}{右} & \multirow{2}{*}{$\varphi_I = |\theta_{\text{左}I} - \theta_{\text{右}I}|$} &  \multirow{2}{*}{$\varphi_{II} = |\theta_{\text{左}II} - \theta_{\text{右}II}|$} & \multirow{2}{*}{$\varphi = \frac{1}{2}(\varphi_I + \varphi_{II})$} \\
+                \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+
+                & \multicolumn{1}{c|}{$\Theta_{\text{左}I}$} & $\Theta_{\text{左}II}$ & \multicolumn{1}{c|}{$\Theta_{\text{右}I}$} & $\Theta_{\text{右}II}$ & & & \\ 
+
+                 \midrule
+                1 & $319^\circ 16'$ & $138^\circ 15'$ & $199^\circ 32'$ & $18^\circ 20'$ & $119^\circ 44'$ & $119^\circ 55'$ & $119^\circ 50'$ \\
+                2 & $311^\circ 43'$ & $131^\circ 59'$ & $192^\circ 1'$ & $12^\circ 2'$ & $119^\circ 42'$ & $119^\circ 57'$ & $119^\circ 50'$ \\            
+                3 & $317^\circ 10'$ & $137^\circ 26'$ & $197^\circ 24'$ & $17^\circ 30'$ & $119^\circ 46'$ & $119^\circ 56'$ & $119^\circ 51'$ \\
+                4 & $296^\circ 48'$ & $96^\circ 47'$ & $177^\circ 3'$ & $336^\circ 49'$ & $119^\circ 45'$ & $119^\circ 58'$ & $119^\circ 52'$ \\
+                5 & $253^\circ 48'$ & $73^\circ 51'$ & $133^\circ 51'$ & $313^\circ 53'$ & $119^\circ 57'$ & $119^\circ 58'$ & $119^\circ 58'$ \\
+                6 & $274^\circ 32'$ & $94^\circ 29'$ & $154^\circ 33'$ & $334^\circ 43'$ & $119^\circ 59'$ & $119^\circ 46'$ & $119^\circ 53'$ \\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+
+        而 $ \angle A = \frac{1}{2} \varphi $, 得到下表：
+
+        \begin{table}[htbp]
+            \centering
+            \caption{三棱镜测量数据}
+            \label{tab:bridge_custom}
+            \begin{tabular}{cc}
+                \toprule
+                实验次数 & $\angle A$ \\
+                \midrule
+                1 & $59^\circ 55'$ \\
+                2 & $59^\circ 55'$ \\
+                3 & $59^\circ 56'$ \\
+                4 & $59^\circ 56'$ \\
+                5 & $59^\circ 59'$ \\
+                6 & $59^\circ 57'$ \\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+
+        进一步可得：
+        \begin{align*}
+        \text{平均棱角：}\overline{A} &= \frac{1}{6}\sum_{i=1}^{6}A_{i}=59^{\circ}56' \\
+        \text{不确定度计算：}U_A &= \sqrt{\frac{1}{6\times(6 - 1)}\sum_{i=1}^{6}(\angle A_{i}-\angle \overline{A})^{2}} = 1'\\
+        U_B &= \frac{\Delta_{\text{仪}}}{\sqrt{3}} = 1' \\
+        \text{即：}u &= \sqrt{U_A^{2}+U_B^{2}} = 1' \\
+        \angle A &= 59^{\circ}56'\pm1' \\
+        \end{align*}
+
+        由此，$ \angle A $ 最终测量结果：\(\angle A=59^{\circ}56'\pm1'\)
+
+    \subsection{误差分析}
+    \xiaosi （运用测量误差、相对误差、不确定度等分析实验结果，20分）
+    
+    \subsubsection*{（一）系统误差}
+    
+    仪器老化、刻度不准等因素造成\(\Delta_{\text{仪}}= \pm 1'\)；同时，环境温度引起仪器热胀冷缩，进而影响测量结果。
+    
+    (这些误差都较小，本次实验测量结果较为准确，不确定度仅为 1′。)
+    
+    \subsubsection*{（二）偶然误差}
+
+    \begin{enumerate}
+        \item 载物台难以完全调平，反射光与目镜中竖直轴线存在一定的夹角，导致光路出现一定偏差，影响最终测量结果。
+        \item 反射光有时较弱，与周围环境光线区分度不大，使得其与竖直轴线对齐的操作难度增加，产生误差。
+        \item 对刻度盘上的刻度进行读数时，判断刻度线是否对齐存在主观性，会有一定误差。
+        \item 在微调过程中，绿色亮十字与刻度线对齐操作判断存在主观性，难以完全对齐，导致望远镜光轴、载物台平面不能与分光计中心轴完全垂直。
+    \end{enumerate}
+    
+    
+    \subsection{实验探讨}
+    \xiaosi （对实验内容、现象和过程的小结，不超过100字，10分）
+
+    \myspace{1}
+
+本次实验学习了分光计的使用方法，并对三棱镜的顶角进行了细致、较为精确的测量。实验原理简单明晰，但实验操作步骤较多、测量数据量较大、操作精度要求较高，故本次实验很好地锻炼了我的动手能力、观察能力和将实验理论转化为实际操作的应用能力，培养了我的耐心。同时，不确定度计算等内容也增强了我的误差分析能力、数据处理能力，为后续的系列实验打下了良好的基础。
+\section{思考题}
+
+    \xiaosi （解答教材或讲义或老师布置的思考题，10分）
+
+    \subsubsection*{测量三棱镜棱角时，棱镜摆放的位置该怎么选，有区别吗？}
+
+    答：三棱镜顶角为什么应接近平台中心偏上一点点位置。因为实验中，希望测量的角度是反射光线之间的夹角，而测量刻度以分光计的中心作为顶点，延长光路后可发现三棱镜顶角与光路交点不重合，如此放置可减小这一误差。
+        
+    \subsubsection*{为什么狭缝要调节至适当宽度（1-2mm）？太宽、太窄有什么问题？}
+    
+    答：狭缝调至 1-2mm 是为让平行光管出射合适平行光，保证测量精度。太宽时，出射光非严格平行，会使谱线展宽模糊，导致角度测量误差大；太窄则透光量不足，光线过弱，难以清晰观测到反射光或谱线，影响实验正常进行。
+        
+    \subsubsection*{粗调时，为什么会出现一面有十字像，转了180°没有十字像?这时该如何调节，请简要描述?}
+    
+    答：因载物台或望远镜倾斜，反光镜两面反射光未进入望远镜，故一面有像、转180°无像。调节方法：先调望远镜倾斜螺钉，降低有像一侧高度或升高另一侧；再微调载物台对应螺钉，使反光镜两面反射光均能进入望远镜，直至转180°后也能看到十字像。
+       
+    \subsubsection*{你可以用别的方法测量三棱镜顶角吗?}
+
+    答：可以用自准直法测三棱镜顶角。将三棱镜放在载物台，使顶角对着望远镜，调节望远镜，分别让其光轴与三棱镜两光学面垂直，从读数装置读得两次望远镜方位角，两角度差值的补角即为顶角。该方法无需平行光入射，操作相对简便，能避免反射法中平行光对准的误差。
+    
+    
+
+\newpage
+
+\sihao\textbf{注意事项：}
+\xiaosi
+\begin{enumerate}
+    \item  用 PDF 格式上传“实验报告”，文件名：学生姓名+学号+实验名称+周次。
+    \item  “实验报告”必须递交在“学在浙大”的本课程的对应实验项目的“作业”模块内。
+    \item  “实验报告”成绩必须在“浙江大学物理实验教学中心网站”-“选课系统”内查询。
+    \item 教学评价必须在“浙江大学物理实验教学中心网站”-“选课系统”内进行，学生必须进行教学评价，才能看到实验报告成绩，教学评价必须在本次实验结束后 3 天内进行。
+\end{enumerate}
+
+\vspace{1cm}
+\xiaosi\centering \textbf{浙江大学物理实验教学中心制}
+
+\end{document}

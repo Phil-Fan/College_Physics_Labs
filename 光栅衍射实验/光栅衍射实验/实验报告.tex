@@ -1,0 +1,406 @@
+\documentclass[10pt,a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}    % 提供方程环境
+\usepackage{amssymb} 
+\usepackage{physics}    % 简化向量、微分算子语法
+\newcommand{\myspace}[1]{\par\vspace{#1\baselineskip}} %自定义空一行
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{booktabs} % 添加 booktabs 宏包
+\usepackage{float}
+\pagestyle{fancy}
+\fancyhf{}  % 清除所有页眉页脚
+\fancyfoot[C]{\thepage}  % 在页脚中央设置页码
+\renewcommand{\headrulewidth}{0pt}  % 去掉页眉横线
+\renewcommand{\footrulewidth}{0pt}  % 去掉页脚横线
+% hyperref 已在上方加载一次，避免重复加载
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{titlesec}
+
+% 重新定义section格式
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\chinese{section}、}
+  {0pt}
+  {}
+
+% 给出常用字号的自定义指令
+\newcommand{\chuhao}{\fontsize{42pt}{48pt}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{42pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{21.6pt}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{20pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{18pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{16pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{ 10.5pt}{12.6pt}\selectfont}
+
+% 定义中文数字转换
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\zhnum{section}、}  % 使用\zhnum而不是\chinese
+  {0pt}
+  {}
+
+% 标题设置
+\title{\xiaochu\textbf{物理实验报告}}
+\author{}
+\date{}
+
+\begin{document}
+
+\vspace*{36pt} % 顶部空白
+
+% 居中填写区域
+\begin{center}
+    \includegraphics[width = 9cm]{head.png}
+    
+    \xiaochu\textbf{物理实验报告}
+    % 预留空白区域
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    
+    \sanhao\textbf{实验名称：\underline{\makebox[8cm]{ 光栅衍射实验 }}} \\[10pt]
+    \sanhao\textbf{实验桌号：\underline{\makebox[8cm]{ 本次实验无 }}} \\[10pt]
+    \sanhao\textbf{指导教师：\underline{\makebox[8cm]{ 王兆英 }}} \\[20pt]
+    
+    % 预留空白区域
+    \myspace{7}
+    
+   \sihao\textbf{班级：\underline{\makebox[6cm]{机器人工程2402}}} \\[10pt]
+    \sihao\textbf{姓名：\underline{\makebox[6cm]{毛挺}}} \\[10pt]
+    \sihao\textbf{学号：\underline{\makebox[6cm]{3240104043}}} \\[30pt]
+    
+    \sihao\textbf{实验日期: \underline{\makebox[0.8cm]{2025}}年 \underline{\makebox[0.4cm]{11}}月\underline{\makebox[0.4cm]{18}}日  星期\underline{\makebox[0.6cm]{二}}下午}
+    
+    \vspace{18pt}
+    \sihao 浙江大学物理实验教学中心
+    
+\end{center}
+
+\newpage
+
+\section{预习报告}
+
+
+    \subsection{实验综述}  
+
+    \xiaosi （自述实验现象、实验原理和实验方法，不超过500字，5分）
+
+
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=7cm]{透射光栅原理示意图.png}
+    \caption{透射光栅原理示意图}
+    \label{fig:principle}
+    \end{wrapfigure}
+
+    \
+
+    \subsubsection*{光栅衍射原理:}
+
+    光栅由一组的等宽、等距和平行排列的狭缝组成，主要分透射光栅和反射光栅两种。本实验使用透射光栅，其原理如图1所示。其中，假设缝宽度为$b$，缝间距为$a$，则$d=a+b$为光栅的空间周期，也称为光栅常数。
+    
+    如图1所示，入射平行光垂直照射到透射光栅后发生衍射，当衍射角为时，相邻狭缝发出的衍射光光程差$\Delta = d \sin \theta $。根据光的相干条件，可推导得出光栅产生衍射亮条纹的条件
+    \begin{align*}
+        d\sin \theta = k \lambda  (k = \pm1, \pm2, \cdots, \pm n)
+    \end{align*}
+
+    其中，是$\theta $衍射角，是$ \lambda $光波长，$d$是光栅常数，$K$是光谱级数，上式也称为光栅方程。
+
+    \subsubsection*{分光计测量光栅常数:}
+
+    利用分光计测量透射光栅的光栅常数的原理如图2所示。将透射光栅放置于分光计载物台上，旋转载物台，使光栅平面垂直于平行光管。打开光源，转动分光计望远镜，即可观察光栅的各级衍射光谱。
+
+    
+    \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=14cm]{使用分光计观察透射光栅衍射光谱示意图.png}
+    \caption{使用分光计观察透射光栅衍射光谱示意图}
+    \label{fig:principle}
+    \end{figure}
+
+    
+
+    当入射光为复色光时，沿光栅法线方向的中央位置，能观察到白亮线，即$k=0$为级衍射线。
+    在法线方向的两侧不同的角度方向上则可以观察到不同波长的光谱线，即为不同波长光的$\pm k$级衍射光谱，对称分布在中央零级光谱两侧。
+    根据光栅方程$d \sin \theta  = k \lambda $，若光栅常数$d$已知，可以通过在实验中测得谱线的$\theta $和$k$，则可由光栅方程计算出谱线的波长$\lambda $；反之，如果已知谱线波长$\lambda $，也可求出光栅常数d。
+
+    \subsubsection*{光栅的角色散率：}
+
+    光栅的角色散率$D$描述了光栅作为色散元件将不同波长的光分开能力的大小，是衡量光栅分光能力的一个关键物理量。角色散率定义为同一级光谱中，单位波长间隔的光被分开的角度，即
+    \begin{align*}
+        D=\frac{\Delta \theta }{\Delta \lambda } 
+    \end{align*}
+    对于透射光栅，其角色散率可由光栅方程对两边求微分得出，即
+    \begin{align*}
+        D=\frac{ k }{d \cos \theta  } 
+    \end{align*}
+
+    由上式，光栅常数越小，光栅的角色散率越大。若光栅常数$d$已知，在实验中测得谱线的衍射级$k$次和衍射角$\theta $，则可计算出相应的光栅角色散率。
+
+    \subsubsection*{分光计的调整：}
+
+    按照 “分光计的调整与使用” 实验中的操作步骤，完成对分光计的调整。
+
+    
+
+    \subsubsection*{使用汞灯测量光栅常数$d$、角色散率$D$和不同颜色光波长：}
+    
+    光栅按图3所示置于载物台中心，其中a、b、c为载物台调节螺钉。调节载物台，使光栅面垂直于平行光管。转动望远镜筒，在光栅法线两侧观察各级衍射光谱。
+
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=4cm]{透射光栅摆放位置示意图.png}
+    \caption{透射光栅摆放位置示意图}
+    \label{fig:principle}
+    \end{wrapfigure}
+
+    
+
+    转动望远镜，使望远镜叉丝竖线与衍射光谱重合，测量$\pm 1$级绿色谱线的角坐标$ \varphi_1$和$\varphi _2$（为了消除偏心差，两侧游标都要读数的$ \varphi_1$和$\varphi _2$都要读），再测量$-1$级绿色谱线的角坐标$ \varphi_1'$和$\varphi _2'$。测量重复六次，列表统计，通过以下公式计算绿色谱线1级衍射的衍射角。
+    \begin{align*}
+        \theta = \frac{|\varphi_{1} - \varphi_{1}' | + |\varphi_{2} - \varphi_{2}' |}{4}
+    \end{align*}
+
+    \vspace{1cm}
+
+    已知绿色谱线的波长为$546.7nm$，通过光栅方程$d \sin \theta  = k \lambda $计算光栅常数$d$及其不确定度，并通过$D=k/d \cos\theta $计算光栅绿色$\pm 1$级谱线的角色散率$D$及其不确定度。
+
+    最后观察并测量紫、蓝、黄谱线的$\pm 1$级衍射光的衍射角，列表统计。根据测得的光栅常数$d$和衍射角$\theta $，计算紫、蓝、黄谱线的波长。
+   
+    
+    \subsection{实验重点}
+
+    \xiaosi（简述本实验的学习重点，不超过100字，3分）
+
+
+    \begin{enumerate}   
+        \item 掌握分光计的调节和使用方法;
+        \item 理解光栅衍射的基本原理；
+        \item 使用分光计测量光栅常数与光栅角分辨率；
+        \item 使用光栅测量汞灯谱线波长。
+
+    \end{enumerate}  
+    
+    
+    \subsection{实验难点}
+    
+    \xiaosi（简述本实验的实现难点，不超过100字，2分）
+
+    \begin{enumerate}    
+        \item 分光计调节难：需依次粗调水平、调望远镜焦至无穷远、用逐次减半法调光轴与主轴垂直，步骤多且精度要求高；
+        \item 光栅定位难：需精准放置于载物台中心，确保光栅面垂直平行光管，偏差会影响衍射光谱观察；
+        \item 衍射角测量难：需读两侧游标消除偏心差，重复测量 6 次，操作繁琐且需把控读数精度；
+        \item 二级光谱观测难：光强弱，需调节狭缝或环境光，分辨与测量难度高于一级光谱。
+    \end{enumerate}  \
+\newpage
+
+\section{原始数据}
+
+    \xiaosi （将有老师签名的“自备数据记录草稿纸”的扫描或手机拍摄图粘贴在下方，20分）
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=13.5cm]{实验数据.jpg}
+        \caption{实验数据}
+        \label{fig:图2}
+    \end{figure}
+
+\newpage
+    
+\section{结果与分析}
+
+    \subsection{数据处理与结果}
+    \xiaosi （列出数据表格、选择数据处理方法、给定测量或计算结果，30分）
+    
+    \
+
+    观察并测量绿色谱线的$\pm 1$级衍射光的衍射角，列表统计如下：
+
+    \begin{table}[H] % 使用 [H] 选项 (来自 float 宏包) 强制表格“就在这里”
+    \centering 
+    \label{tab:my_experiment} 
+    \begin{tabular}{*{6}{c}}
+        \toprule
+        % --- 表头 第1行 ---
+        % \multirow{2}{*}{...} 表示这个单元格将跨越 2 行
+        % \multicolumn{2}{c|}{...} 表示这个单元格将跨越 2 列, 居中(c), 右侧有竖线
+        \multirow{2}{*}{实验次数} & \multicolumn{2}{c}{+1级条纹} & \multicolumn{2}{c}{-1级条纹} & \multirow{2}{*}{衍射角 $\theta$} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+        % --- 表头 第2行 ---
+        & \multicolumn{1}{c|}{$\varphi _1$} & $\varphi _2$ & \multicolumn{1}{c|}{$\varphi _1'$} & $\varphi _2'$ &  \\ % 第1和第6列因为 \multirow 保持空白
+        
+        % --- 数据行 ---
+        \midrule
+        1 & $310^\circ46'$& $130^\circ48'$& $291^\circ54'$& $111^\circ57'$& $9^\circ25'45''$ \\
+
+        2 & $310^\circ46'$& $130^\circ48'$& $291^\circ55'$& $111^\circ57'$& $9^\circ25'30''$ \\
+
+        3 & $310^\circ47'$& $130^\circ48'$& $291^\circ55'$& $111^\circ58'$& $9^\circ25'30''$ \\
+ 
+        4 & $310^\circ46'$& $130^\circ49'$& $291^\circ55'$& $111^\circ58'$& $9^\circ25'30''$ \\
+
+        5 & $310^\circ47'$& $130^\circ49'$& $291^\circ56'$& $111^\circ57'$& $9^\circ25'30''$ \\
+
+        6 & $310^\circ45'$& $130^\circ47'$& $291^\circ56'$& $111^\circ57'$& $9^\circ24'45''$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\textbf{计算衍射角$\theta $及其不确定度：}
+\begin{gather*}
+    \bar{\theta} = \sum_{i=1}^{6} \theta _i= 9^\circ 25' 25'' \\
+    \text{A类不确定度：}u_A(\theta) = \sqrt{\frac{1}{6(6-1)} \sum_{i=1}^{6} (\theta _i - \bar{\theta })^2} \approx 8'' \\
+    \text{B类不确定度：}u_B(\theta) = \frac{\Delta_{\text{inst}}}{\sqrt{3}} = \frac{1'}{\sqrt{3}} \approx 35'' \\
+    \text{合成不确定度：}u_\theta = \sqrt{u_A^2 + u_B^2} = \sqrt{8.37^2 + 34.64^2} \approx 36'' \\
+    \therefore \theta = 9^\circ 25' \pm 36'' 
+\end{gather*}
+\textbf{计算光栅常数$d $及其不确定度（已知绿色谱线的波长为$\lambda = 546.07 nm$）：}
+\begin{gather*}
+    d = \frac{k \lambda}{\sin \bar{\theta}} \approx 3335.2 \text{ nm}\\
+    u_d = \left| \frac{\partial d}{\partial \theta } \right| \cdot u_\theta = \left| -d \cot \bar{\theta} \right| \cdot u_\theta \approx 3.5 \text{ nm}\\
+    \therefore \text{光栅常数：} d = (3335 \pm 4) \text{ nm}
+\end{gather*}
+\textbf{计算角色散率 $D$及其不确定度：}
+\begin{gather*}
+    D = \frac{k}{d \cos \bar{\theta}} = \frac{\tan \bar{\theta}}{\lambda} \approx 3.039 \times 10^5 \text{ rad/m}\\
+    u_D = \left|\frac{\partial D}{\partial \theta}\right| \cdot u_\theta =\frac{\sec^2 \bar{\theta}}{\lambda} \cdot u_\theta \approx 325 \text{ rad/m} \\ 
+    \therefore \text{角色散率}D = 303900 \pm 300 \text{ rad/m}
+\end{gather*}
+
+
+\textbf{计算紫、蓝、黄谱线的波长：}
+
+测量并记录紫、蓝、黄谱线的$\pm 1$级衍射光的衍射角$\theta $，并且已算出光栅常数$d$，于是可通过光栅方程$d \sin \theta =k\lambda $计算出紫、蓝、黄谱线的波长如下表：
+
+    \begin{table}[H] % 使用 [H] 选项 (来自 float 宏包) 强制表格“就在这里”
+    \centering 
+    \label{tab:my_experiment} 
+    \begin{tabular}{*{7}{c}}
+        \toprule
+        % --- 表头 第1行 ---
+        % \multirow{2}{*}{...} 表示这个单元格将跨越 2 行
+        % \multicolumn{2}{c|}{...} 表示这个单元格将跨越 2 列, 居中(c), 右侧有竖线
+        \multirow{2}{*}{颜色} & \multicolumn{2}{c}{+1级条纹} & \multicolumn{2}{c}{-1级条纹} & \multirow{2}{*}{衍射角 $\theta$} & \multirow{2}{*}{波长$\lambda$}\\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+        % --- 表头 第2行 ---
+        & \multicolumn{1}{c|}{$\varphi _1$} & $\varphi _2$ & \multicolumn{1}{c|}{$\varphi _1'$} & $\varphi _2'$ &  \\ % 第1和第6列因为 \multirow 保持空白
+        
+        % --- 数据行 ---
+        \midrule
+        紫 & $308^\circ20'$& $128^\circ24'$& $294^\circ24'$& $114^\circ27'$& $6^\circ58'15''$ & 404.5 nm\\
+
+        蓝 & $308^\circ53'$& $128^\circ52'$& $293^\circ50'$& $113^\circ53'$& $7^\circ31'0''$ & 436.5 nm\\
+
+        黄 & $311^\circ22'$& $131^\circ26'$& $291^\circ22'$& $111^\circ25'$& $10^\circ0'15''$ & 579.5 nm\\
+
+        \bottomrule
+    \end{tabular}
+    \end{table}
+
+    \subsection{误差分析}
+    \xiaosi （运用测量误差、相对误差、不确定度等分析实验结果，20分）
+    
+    \begin{enumerate}
+        \item 载物台难以完全调平，使光路与理论光路产生了一定偏差，对最终结果带来影响；
+        \item 在寻找最小偏向角的过程中，光线在转折点附近移动很缓慢，人的主观性对最小偏向角位置的选取存在影响；
+        \item 在刻度盘上读数时，判断游标与刻度线对齐时存在主观性，产生读数误差。
+    \end{enumerate}
+
+    以上误差影响较小，实验结果可靠且精度高。实验中六次测量得到的 A 类不确定度 $u_A \approx 8''$，数值极小。然而，最终的合成不确定度 $u_\theta \approx 36''$ 主要由 B 类不确定度 $u_B \approx 35''$ 主导，该误差源于仪器（分光计） $1'$ 的最小分度限制。
+    因此，本次实验的精度主要由仪器系统误差决定，而非随机波动。
+    
+    基于此测量值计算得到的光栅常数 $d = (3335 \pm 4) \text{ nm}$，其相对不确定度约为 $0.1\%$。角散率 $D$ 的相对不确定度约为 $0.11\%$，精度较高。
+    
+    最后，利用测得的 $d$ 计算得到的紫、蓝、黄三条谱线波长（$404.5 \text{ nm}, 436.5 \text{ nm}, 579.5 \text{ nm}$）与汞灯的理论波长高度吻合，相对误差均在 $0.2\%$ 以内。这有力地相互验证了光栅常数 $d$ 和衍射角 $\theta$ 测量的准确性。
+    
+    
+    \subsection{实验探讨}
+    \xiaosi （对实验内容、现象和过程的小结，不超过100字，10分）
+
+    \myspace{1}
+
+    本次光栅衍射实验，我熟练掌握了分光计调节步骤，也通过实操深化了对光栅衍射原理的理解。从精准测量衍射角、计算光栅常数与谱线波长，到观察不同级次光谱，每一步都需注重细节 —— 比如消除游标偏心差、保证光栅定位准确，这让我意识到实验严谨性对数据可靠性的关键作用，也提升了自己的实操与数据分析能力。        
+    \section{思考题}
+
+    \xiaosi （解答教材或讲义或老师布置的思考题，10分）
+
+    \subsubsection*{调节光栅时如发现谱线倾斜，可能是什么原因？应如何调整？}
+
+    \textbf{原因：}谱线倾斜多因光栅刻痕未与分光计主轴平行（即光栅平面与载物台调节不匹配），或载物台本身未调平导致光栅倾斜。
+    
+    \textbf{调整方法：}松开载物台固定螺丝，轻微转动载物台（或调节载物台调节螺钉），同时观察望远镜中谱线，直至谱线与分划板叉丝竖线平行，再锁紧载物台。
+
+    \subsubsection*{平行光管狭缝太宽或太窄是会出现什么现象？为什么？}
+
+    \textbf{狭缝太宽：}会导致衍射谱线变宽、边缘模糊，不同波长谱线可能重叠（如汞灯黄双线难以区分）。
+    \textbf{原因：}狭缝过宽时，单缝衍射的中央明纹宽度增大，掩盖了光栅衍射的精细分光效果，降低分辨率。
+
+    \textbf{狭缝太窄：}谱线亮度显著降低，甚至部分弱谱线（如二级光谱）无法观察。
+    \textbf{原因：}通过狭缝的光强不足，衍射光信号减弱，超出望远镜目镜的分辨下限。
+
+    \subsubsection*{试推导平行光斜入射时的光栅方程，解释提升内容 3 的现象。}
+
+    \textbf{斜入射光栅方程推导}
+
+    设平行光以入射角i（入射光与光栅法线夹角）斜入射，相邻狭缝光程差由两部分组成：
+    
+    入射时：相邻狭缝入射光光程差为\(d\sin i\)；
+    
+    衍射时：相邻狭缝衍射光光程差为\(d\sin\theta\)（\(\theta\)为衍射角，与i在法线同侧时取正，异侧取负）。
+    
+    总光程差\(\Delta = d\sin i \pm d\sin\theta\)，由相干加强条件\(\Delta = k\lambda\)（\(k=\pm1,\pm2,\dots\)），得斜入射光栅方程：\(d(\sin i \pm \sin\theta) = k\lambda\)
+    
+    \textbf{ 提升内容 3 现象分析}
+    
+    旋转光栅使入射角\(i\approx10^\circ\)时，\(+1\)级与\(-1\)级谱线衍射角不同：
+    
+    对\(+1\)级（衍射与入射同侧）：方程为\(d(\sin i + \sin\theta_+) = \lambda\)，\(\sin\theta_+ = \frac{\lambda}{d} - \sin i\)；
+    
+    对\(-1\)级（衍射与入射异侧）：方程为\(d(\sin i - \sin\theta_-) = \lambda\)，\(\sin\theta_- = \sin i - \frac{\lambda}{d}\)。
+    
+    因\(\sin\theta_+ \neq \sin\theta_-\)，故\(\theta_+ \neq \theta_-\)，即两级谱线衍射角不同。
+
+    
+    \subsubsection*{用本实验装置可以分辨钠灯黄色双线（5 89 .0 nm与5 89 . 6 nm）吗？如果可以，试给出方案。如果不行，试提出改进方案。}
+
+    \textbf{能否分辨？}可以分辨。汞灯黄双线波长差\(\Delta\lambda=0.6\ \text{nm}\)，钠灯黄双线\(\Delta\lambda=0.6\ \text{nm}\)（与汞灯黄双线相同），本实验装置可通过以下方案分辨。
+    
+    \textbf{分辨方案:}
+    \begin{enumerate}
+        \item \textbf{选择高衍射级次k：}由角色散率公式\(D=\frac{k}{d\cos\theta}\)，k越大，D越大，黄双线分开的角度\(\Delta\theta=D\Delta\lambda\)越大，越易分辨（优先选\(k=2\)级，需调亮狭缝或暗化环境）；
+        \item \textbf{精准测量：}用分光计测量钠灯黄双线\(+k\)、\(-k\)级衍射角，计算\(\Delta\theta\)，若\(\Delta\theta\)大于望远镜最小分辨角（约\(1'\)），即可分辨；
+        \item \textbf{数据验证：}若实验中光栅常数\(d\approx10^{-6}\ \text{m}\)，\(k=2\)时，
+        
+        \(D\approx\frac{2}{10^{-6}\times\cos\theta}\approx2\times10^6\ \text{rad/m}\)，
+        
+        \(\Delta\theta=2\times10^6\times0.6\times10^{-9}=1.2\times10^{-3}\ \text{rad}\approx4.1'\)，远大于最小分辨角，故可分辨。
+    \end{enumerate}
+
+\newpage
+
+\sihao\textbf{注意事项：}
+\xiaosi
+\begin{enumerate}
+    \item  用 PDF 格式上传“实验报告”，文件名：学生姓名+学号+实验名称+周次。
+    \item  “实验报告”必须递交在“学在浙大”的本课程的对应实验项目的“作业”模块内。
+    \item  “实验报告”成绩必须在“浙江大学物理实验教学中心网站”-“选课系统”内查询。
+    \item 教学评价必须在“浙江大学物理实验教学中心网站”-“选课系统”内进行，学生必须进行教学评价，才能看到实验报告成绩，教学评价必须在本次实验结束后 3 天内进行。
+\end{enumerate}
+
+\vspace{1cm}
+\xiaosi\centering \textbf{浙江大学物理实验教学中心制}
+
+\end{document}

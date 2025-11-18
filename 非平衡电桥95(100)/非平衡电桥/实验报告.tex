@@ -1,0 +1,310 @@
+\documentclass[10pt,a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}    % 提供方程环境
+\usepackage{physics}    % 简化向量、微分算子语法
+\newcommand{\myspace}[1]{\par\vspace{#1\baselineskip}} %自定义空一行
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{booktabs} % 添加 booktabs 宏包
+\pagestyle{fancy}
+\fancyhf{}  % 清除所有页眉页脚
+\fancyfoot[C]{\thepage}  % 在页脚中央设置页码
+\renewcommand{\headrulewidth}{0pt}  % 去掉页眉横线
+\renewcommand{\footrulewidth}{0pt}  % 去掉页脚横线
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{titlesec}
+
+% 重新定义section格式
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\chinese{section}、}
+  {0pt}
+  {}
+
+% 给出常用字号的自定义指令
+\newcommand{\chuhao}{\fontsize{42pt}{48pt}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{42pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{21.6pt}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{20pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{18pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{16pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{12.6pt}\selectfont}
+
+% 定义中文数字转换
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\zhnum{section}、}  % 使用\zhnum而不是\chinese
+  {0pt}
+  {}
+
+% 标题设置
+\title{\xiaochu\textbf{物理实验报告}}
+\author{}
+\date{}
+
+\begin{document}
+
+\vspace*{36pt} % 顶部空白
+
+% 居中填写区域
+\begin{center}
+    \includegraphics[width = 9cm]{head.png}
+    
+    \xiaochu\textbf{物理实验报告}
+    % 预留空白区域
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    
+    \sanhao\textbf{实验名称：\underline{\makebox[8cm]{ 非平衡电桥 }}} \\[10pt]
+    \sanhao\textbf{实验桌号：\underline{\makebox[8cm]{ 15 }}} \\[10pt]
+    \sanhao\textbf{指导教师：\underline{\makebox[8cm]{ 唐浩原 }}} \\[20pt]
+    
+    % 预留空白区域
+    \myspace{7}
+    
+   \sihao\textbf{班级：\underline{\makebox[6cm]{机器人工程2402}}} \\[10pt]
+    \sihao\textbf{姓名：\underline{\makebox[6cm]{毛挺}}} \\[10pt]
+    \sihao\textbf{学号：\underline{\makebox[6cm]{3240104043}}} \\[30pt]
+    
+   \sihao\textbf{实验日期: \underline{\makebox[0.8cm] 2025 }年 \underline{\makebox[0.4cm]10}月\underline{\makebox[0.4cm]11}日  星期\underline{\makebox[0.6cm]六}上午}
+    
+    \vspace{18pt}
+    \sihao 浙江大学物理实验教学中心
+    
+\end{center}
+
+\newpage
+
+\section{预习报告}
+
+    \subsection{实验综述}
+    
+    \xiaosi （自述实验现象、实验原理和实验方法，不超过500字，5分）
+    
+    \myspace{0}
+
+    
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=7cm]{非平衡电桥.png}
+    \caption{非平衡电桥电路图}
+    \label{fig:图1}
+    \end{wrapfigure}
+
+    \
+    
+    \subsubsection*{非平衡电桥工作原理：}
+    如右图所示，与惠斯登电桥相比，非平衡电桥在 B、D 间加的并非检流计，而是负载电阻\(R_g\)，通过\(I_g\)和\(U_g\)的测量来换算\(R_x\)的数值。当 B、D 处于开路状态时，\(R_g\)无穷大，\(I_g = 0\)，此时只有电压\(U_g\)，用U表示，则输出电压为：
+    \begin{equation*}
+    U = U_g=\frac{R_{2} R_{x}-R_{1} R_{3}}{(R_{1}+R_{x})(R_{2}+R_{3})} \varepsilon
+    \end{equation*}
+
+    调节四个桥臂电阻，使\(R_{2} R_{x}=R_{1} R_{3}\)，此时 B、D 两点电位相等，\(U = 0\)，电桥达到平衡状态。为了测量的准确性，在测量起始点，电桥必须调至平衡，称为预调平衡，这样可使输出电压只与某一臂电阻变化有关。若\(R_1\)、\(R_2\)、\(R_3\)固定，\(R_x\)作为传感器，随待测物理量（如温度、应力等）的改变而变化时，B、D 两点电位不等，电桥进入非平衡状态，\(R_x\)也由平衡状态变为\(R_x+\Delta R_x\)，此时 B、D 端输出的非平衡电压为：
+    \begin{equation*}
+        U=\frac{R_{2} R_{x}+R_{2} \Delta R_{x}-R_{1} R_{3}}{\left(R_{1}+R_{x}+\Delta R_{x}\right)\left(R_{2}+R_{3}\right)} \varepsilon
+    \end{equation*}
+    
+    根据U的大小变化，可知桥路中电阻的变化情况，由此知晓物理量的变化。
+    
+    \subsubsection*{非平衡电桥实验方法：}
+
+    \begin{enumerate}
+        \item 打开 FQ 型非平衡直流电桥开关，将\(R_a\)、\(R_b\)、\(R_c\)分别接至\(R_1\)、\(R_2\)、\(R_3\)；
+        \item 铜电阻 Cu50 在\(0^{\circ}C\)时阻值约为 50Ω，因此分别将\(R_a\)、\(R_b\)、\(R_c\)设为 50Ω；
+        \item 如有条件，可先在\(0^{\circ}C\)下对电桥预调平衡：将 “功能 - 电压选择” 开关置于 “非平衡 - 电压” 档，将待测铜电阻\(R_x\)置于盛冰水混合物的容器中，\(R_a\)、\(R_b\)、\(R_c\)均置于 50Ω 并接至\(R_1\)、\(R_2\)、\(R_3\)，按下 B、G 按钮，微调\(R_s\)，使输出电压为零，此时电桥平衡，实现\(t = 0^{\circ}C\)时，\(U = 0\)；
+        \item 将 “功能 - 电压选择” 开关置于 “非平衡 - 电压” 档，按下 B、G 按钮测量并记录非平衡电压值U和室温t；
+        \item 利用非平衡电桥加热装置对铜电阻进行加温，以\(5^{\circ}C\)为间隔，待温度达到相对稳定时按下 B、G 按钮，测量并记录非平衡电压U及其对应温度t；
+        \item 利用实验数据作\(U - t\)特性曲线，由\(\alpha=\frac{4 U}{t(\varepsilon - 2 U)}\)求出\(\alpha\)，将其平均值与理论值进行比较，计算相对误差
+    \end{enumerate}
+
+    \subsubsection*{变温金属电阻温度系数测量原理:}
+    变温金属电阻阻值\(R_t\)随温度的改变而不同，其电阻随温度的变化近似为：
+    \begin{equation*}
+        R_{t}=R_{0}(1+\alpha t)
+    \end{equation*}
+
+    （其中，\(R_{0}\)为变温电阻\(0^{\circ}C\)时阻值，\(\alpha\)为电阻的温度系数）。
+
+    当 B、D 处于开路状态，变温电阻从\(0^{\circ}C\)变到t时：
+    
+    令\(R_{x}=R_t\)，\(R_{1}=R_{2}=R_{3}=R_{0}\)，代入$U=\frac{R_{2} R_{x}-R_{1} R_{3}}{\left(R_{1}+R_{x} \right)\left(R_{2}+R_{3}\right)} \varepsilon$整理得：
+    \begin{equation*}
+        U=\frac{\alpha t}{4 + 2\alpha t}\varepsilon
+    \end{equation*}
+
+    由此可得：
+
+    \begin{equation*}
+        \alpha=\frac{4 U}{t(\varepsilon - 2 U)}
+    \end{equation*}
+
+    因电桥工作电源\(\varepsilon = 1.3V\)，所以只需测出U、t，即可求出变温电阻的温度系数\(\alpha\)。
+
+    \subsubsection*{描绘铜电阻 Cu50 电阻温度特性曲线\(R_t - t\)：}
+    \begin{enumerate}
+        \item 将 “功能 - 电压选择” 开关置于 “平衡 5V” 档，此时电桥进入平衡电桥工作状态；
+        \item 因电桥平衡时\(R_2R_x = R_1R_3\)，即\(R_{x}=\frac{R_{1}}{R_{2}}R_{3}\)，若\(R_1 = R_2\)，则\(R_x = R_3\)，将\(R_a\)、\(R_b\)接入\(R_1\)、\(R_2\)，\(R_c\)接入\(R_3\)；
+        \item 对铜电阻进行加温，以\(5^{\circ}C\)为间隔，待温度达到相对稳定时，按下 B、G 按钮，并迅速调节\(R_c\)使电桥平衡，此时\(R_c\)的值即为当前温度下铜电阻 Cu50 的阻值，记录\(R_c\)及其对应的温度t；
+        \item 利用实验数据作\(R_t - t\)特性曲线，由曲线求出电阻温度系数\(\alpha\)，与理论值相比计算相对误差。
+    \end{enumerate}
+    \subsection{实验重点}
+    
+    \xiaosi（简述本实验的学习重点，不超过100字，3分）
+
+    \begin{enumerate}
+        \item 掌握非平衡直流电桥的工作原理和测量方法；
+        \item 应用非平衡电桥测量变温金属电阻温度系数。
+    \end{enumerate}
+    
+    \subsection{实验难点}
+    
+    \xiaosi（简述本实验的实现难点，不超过100字，2分）
+
+    \begin{enumerate}
+        \item 实验中电阻温度变化快，读取数据应在同一时刻，否则会造成较大误差；
+        \item 应加热装置 PID 调节需反复微调，响应滞后，易超调或不达设定温，影响数据稳定性，难满足实验精度。
+    \end{enumerate}
+
+
+\section{原始数据}
+
+    \xiaosi （将有老师签名的“自备数据记录草稿纸”的扫描或手机拍摄图粘贴在下方，20分）
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=12cm]{实验数据.jpg}
+        \caption{实验数据}
+        \label{fig:图2}
+    \end{figure}
+
+    
+\section{结果与分析}
+
+    \subsection{数据处理与结果}
+    \xiaosi （列出数据表格、选择数据处理方法、给定测量或计算结果，30分）
+
+    \subsubsection*{测量铜电阻 Cu50 温度系数}
+
+    % 这是一个完整的、可浮动的表格环境
+    \begin{table}[htbp]
+        \centering % 让表格居中显示
+        \caption{测量铜电阻 Cu50 温度系数} % 表格的标题
+        \label{tab:resistance_data} % 表格的标签，用于交叉引用
+        \begin{tabular}{*{9}{c}} % 定义表格有7列，每一列都居中(c)
+            \toprule % 画出顶部的粗横线 (来自 booktabs)
+            测量次数 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+            \midrule % 画出中间的分割线 (来自 booktabs)
+            温度$t/ ^{\circ}C$ & 30.3 & 35.1 & 40.1 & 45.0 & 50.6 & 55.2 & 60.0 & 64.9 \\
+            U/mV & 39.0 & 45.0 & 51.1 & 57.2 & 63.2 & 68.2 & 74.0 & 79.0 \\
+            $\alpha / ^{\circ}C^{-1} $ & 0.00421 & 0.00424 & 0.00426 & 0.00429 & 0.00426 & 0.00425 & 0.00428 & 0.00426 \\
+            \bottomrule % 画出底部的粗横线 (来自 booktabs)
+        \end{tabular}
+    \end{table}
+
+    上表为实验直接测得的t、U以及由公式\(\alpha=\frac{4 U}{t(\varepsilon - 2 U)}\)计算得到的\(\alpha\)值。以下用两种方法计算确定\(\alpha\)的测量结果：
+
+    \begin{enumerate}
+        \item \textbf{直接求平均值：} \(\bar{\alpha}=\frac{1}{8}\sum_{i = 1}^{8}\alpha_{i}=0.00424^{\circ}C^{-1}\)，而\(\alpha_{0}=0.00428^{\circ}C^{-1}\)，则\(E_{1}=\frac{|\bar{\alpha}-\alpha_{0}|}{\alpha_{0}}×100\% = 0.93\%\)。
+        此方法得到的测量结果与理论值符合得较好。
+        \item \textbf{作图法：} 由\(\alpha=\frac{4 U}{t(\varepsilon - 2 U)}\)可变形为\(\frac{1}{U}=\frac{4}{\varepsilon\alpha}\cdot\frac{1}{t}+\frac{2}{\varepsilon}\)，通过绘制\(\frac{1}{U}-\frac{1}{t}\)图，斜率\(k = \frac{4}{\varepsilon\alpha}\)，则可得\(\alpha=\frac{4}{\varepsilon k}\)，即得到\(\alpha\)的测量结果。使用计算机软件对图进行线性拟合，得到拟合直线：\(y = 736.62x + 1.25\)，则\(\alpha=\frac{4}{\varepsilon k}=0.00426^{\circ}C^{-1}\)，\(E=\frac{|\alpha - \alpha_{0}|}{\alpha_{0}}×100\% = 0.47\%\)。
+        此方法得到的测量结果与理论值符合得更好。
+    \end{enumerate}
+    
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=15cm]{表1.jpg}
+        \caption{作图法确定 $\alpha$ 测量结果}
+        \label{fig:图2}
+    \end{figure}
+
+    \subsubsection*{描绘铜电阻 Cu50 电阻温度特性曲线\(R_t - t\)}
+
+    \begin{table}[htbp]
+        \centering % 让表格居中显示
+        \caption{用 QJ-23 型盒式惠斯登电桥测量未知电阻} % 表格的标题
+        \label{tab:resistance_data} % 表格的标签，用于交叉引用
+        \begin{tabular}{*{9}{c}} % 定义表格有7列，每一列都居中(c)
+            \toprule % 画出顶部的粗横线 (来自 booktabs)
+            测量次数 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+            \midrule % 画出中间的分割线 (来自 booktabs)
+            温度$t/ ^{\circ}C$ & 30.0 & 35.0 & 40.0 & 45.0 & 50.60 & 55.0 & 60.0 & 65.0 \\
+            $ R_t / \Omega$ & 56.45 & 57.49 & 58.56 & 59.60 & 60.70 & 61.80 & 628.80 & 63.90 \\
+            \bottomrule % 画出底部的粗横线 (来自 booktabs)
+        \end{tabular}
+    \end{table}
+
+    使用计算机软件对\(R_t - t\)图进行线性拟合，得到拟合直线：\(y = 0.213x + 50.040\)。由公式\(R_t=R_{0}(1+\alpha t)\)知，\(k = R_{0}\alpha\)，\(b = R_{0}\)，得\(\alpha=\frac{k}{b}=0.00426^{\circ}C^{-1}\)，相对误差\(E=\frac{|\alpha - \alpha_{0}|}{\alpha_{0}}×100\% = 0.53\%\)，此相对误差较小，处理较精确。
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=15cm]{表2.jpg}
+        \caption{铜电阻 Cu50 电阻温度特性曲线}
+        \label{fig:图2}
+    \end{figure}  
+
+    \subsection{误差分析}
+    \xiaosi （运用测量误差、相对误差、不确定度等分析实验结果，20分）
+
+    \myspace{1}
+    
+    本次实验采用两种方法测量铜电阻 Cu50 的温度系数。可以发现：使用非平衡电桥测得的\(\alpha\)的相对误差（7.7\% - 12.3\%），远大于平衡电桥的测量得到的\(\alpha\)的相对误差（0.7\%），其可能的原因如下：
+
+    \begin{enumerate}
+        \item 由于实验室条件限制，非平衡电桥开始前无法在\(0^{\circ}C\)对电桥进行预调平衡操作，可能为后续测量带来较大的误差；
+        \item 非平衡电桥实验中按理论值 1.3V 计算\(\varepsilon\)，实际仪器的\(\varepsilon\)值不一定为 1.3V，可能为最终的测量结果带来较大的误差（若能进行相关测量并将实际值代入计算，可一定程度上减小误差）；
+        \item 电阻值随温度变化而时刻变化，变化速度较快，有时t与U并不在同一时刻读数，带来一定误差；
+        \item 平衡电桥实验中使电桥平衡（即电压表示数为 0.0mV）的电阻值并不精确，由此带来一定测量误差；
+        \item 铜电阻发生氧化，使其实际电阻温度系数与标准值不符。
+    \end{enumerate}
+
+    \subsection{实验探讨}
+    \xiaosi （对实验内容、现象和过程的小结，不超过100字，10分）
+
+    \myspace{1}
+
+    本次实验分别使用了非平衡电桥以及平衡电桥对电阻的温度系数进行了测量，实验整体操作难度不大，但很好地锻炼了观察能力和数据处理能力，提升了实验综合素养。此外，非平衡电桥实验测量结果与平衡电桥实验测量结果的相对误差的明显差异也引发了我的思考，并由此进行了误差分析，为改进实验，减小误差提供了想法。
+\section{思考题}
+
+    \xiaosi （解答教材或讲义或老师布置的思考题，10分）
+
+    \subsubsection*{简述非平衡电桥与平衡电桥之间的区别}
+    
+    答：平衡电桥是把待测电阻与标准电阻进行比较，通过调节电桥平衡，从而测得电阻值，一般只能适用于测量相对稳定状态的物理量；非平衡电桥通过测量桥式电路中的不平衡电压，通过一系列运算处理，得到某个物理量的变化信息（如压力、温度等）。
+
+    平衡电桥在实验过程中需不断调整电阻R，以使电桥达到平衡，操作相对复杂；非平衡电桥在实验过程中无需调整R的阻值，只需记录电势差U，操作较方便。
+
+    \subsubsection*{非平衡电桥在工程中有哪些应用？请举例说明}
+    
+    答：本实验中，非平衡电桥的电势差变化可以反应温度的变化，由此推之，在工程中，可采用热敏电阻，制成较为精确的温度传感器。同理，将测量元件换成压敏电阻，可将压力大小转化为相应的电信号，制成较为精确的压力传感器。
+    
+
+\newpage
+
+\sihao\textbf{注意事项：}
+\xiaosi
+\begin{enumerate}
+    \item  用 PDF 格式上传“实验报告”，文件名：学生姓名+学号+实验名称+周次。
+    \item  “实验报告”必须递交在“学在浙大”的本课程的对应实验项目的“作业”模块内。
+    \item  “实验报告”成绩必须在“浙江大学物理实验教学中心网站”-“选课系统”内查询。
+    \item 教学评价必须在“浙江大学物理实验教学中心网站”-“选课系统”内进行，学生必须进行教学评价，才能看到实验报告成绩，教学评价必须在本次实验结束后 3 天内进行。
+\end{enumerate}
+
+\vspace{1cm}
+\xiaosi\centering \textbf{浙江大学物理实验教学中心制}
+
+\end{document}

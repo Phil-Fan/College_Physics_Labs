@@ -1,0 +1,275 @@
+\documentclass[10pt,a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}    % 提供方程环境
+\usepackage{physics}    % 简化向量、微分算子语法
+\newcommand{\myspace}[1]{\par\vspace{#1\baselineskip}} %自定义空一行
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{booktabs} % 添加 booktabs 宏包
+\pagestyle{fancy}
+\fancyhf{}  % 清除所有页眉页脚
+\fancyfoot[C]{\thepage}  % 在页脚中央设置页码
+\renewcommand{\headrulewidth}{0pt}  % 去掉页眉横线
+\renewcommand{\footrulewidth}{0pt}  % 去掉页脚横线
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{titlesec}
+
+% 重新定义section格式
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\chinese{section}、}
+  {0pt}
+  {}
+
+% 给出常用字号的自定义指令
+\newcommand{\chuhao}{\fontsize{42pt}{48pt}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{42pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{21.6pt}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{20pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{18pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{16pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{12.6pt}\selectfont}
+
+% 定义中文数字转换
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\zhnum{section}、}  % 使用\zhnum而不是\chinese
+  {0pt}
+  {}
+
+% 标题设置
+\title{\xiaochu\textbf{物理实验报告}}
+\author{}
+\date{}
+
+\begin{document}
+
+\vspace*{36pt} % 顶部空白
+
+% 居中填写区域
+\begin{center}
+    \includegraphics[width = 9cm]{head.png}
+    
+    \xiaochu\textbf{物理实验报告}
+    % 预留空白区域
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    \vspace{13pt}
+    
+    \sanhao\textbf{实验名称：\underline{\makebox[8cm]{ 惠斯登电桥 }}} \\[10pt]
+    \sanhao\textbf{实验桌号：\underline{\makebox[8cm]{ 04 }}} \\[10pt]
+    \sanhao\textbf{指导教师：\underline{\makebox[8cm]{ 沈昊 }}} \\[20pt]
+    
+    % 预留空白区域
+    \myspace{7}
+    
+   \sihao\textbf{班级：\underline{\makebox[6cm]{机器人工程2402}}} \\[10pt]
+    \sihao\textbf{姓名：\underline{\makebox[6cm]{毛挺}}} \\[10pt]
+    \sihao\textbf{学号：\underline{\makebox[6cm]{3240104043}}} \\[30pt]
+    
+   \sihao\textbf{实验日期: \underline{\makebox[0.8cm] 2025 }年 \underline{\makebox[0.4cm]9}月\underline{\makebox[0.4cm]25}日  星期\underline{\makebox[0.6cm]四}上午}
+    
+    \vspace{18pt}
+    \sihao 浙江大学物理实验教学中心
+    
+\end{center}
+
+\newpage
+
+\section{预习报告}
+
+    \subsection{实验综述}
+    
+    \xiaosi （自述实验现象、实验原理和实验方法，不超过500字，5分）
+    
+    \myspace{0}
+
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \centering
+    \includegraphics[width=7cm]{电桥.png}
+    \caption{惠斯通电桥电路图}
+    \label{fig:图1}
+    \end{wrapfigure}
+
+    \
+    
+    \subsubsection*{惠斯登电桥测量电阻的原理：}
+    右图为惠斯登电桥的原理图，\(R_{1}\)、\(R_{2}\)、\(R_{s}\)、\(R_{x}\)组成 “桥臂”，G 和 S 组成 “桥路”。当通过检流计 G 的电流\(I_{g}\)为 0 时，B、D 电位相同，电桥达到平衡，此时流过电阻\(R_{1}\)和\(R_{x}\)的电流同为\(I_{1}\)，流过电阻\(R_{2}\)和\(R_{s}\)的电流同为\(I_{2}\)，即\(U_{AB}=I_{1}R_{1}=U_{AD}=I_{2}R_{2}\)，因此有\(\frac{I_{1}}{I_{2}}=\frac{R_{2}}{R_{1}}\)，即\(R_{x}=\frac{R_{1}}{R_{2}}R_{s}\)。该式即为电桥的平衡条件，只要调节\(R_{s}\)使检流计无电流通过，并记下\(R_{s}\)数值，就能得出\(R_{x}\)。
+    
+    \subsubsection*{交换法减小自组电桥系统误差:}
+    在上图所示自组电桥中，若电桥的灵敏度足够高，则系统误差主要由\(R_{1}\)、\(R_{2}\)、\(R_{s}\)自身的误差决定，此时相对不确定度为\(\frac{\Delta R_{x}}{R_{x}}=\sqrt{(\frac{\Delta R_{1}}{R_{1}})^{2}+(\frac{\Delta R_{2}}{R_{2}})^{2}+(\frac{\Delta R_{s}}{R_{s}})^{2}}\)。为尽量减小系统误差，可在电桥调节平衡后，互换\(R_{x}\)和\(R_{s}\)，设\(R_{s}\)变为\(R_{s}'\)时电桥重新达到平衡，这时有\(R_{x}=\frac{R_{2}}{R_{1}}R_{s}'\)，又因\(R_{x}=\frac{R_{1}}{R_{2}}R_{s}\)，故有\(R_{x}=\sqrt{R_{s}R_{s}'}\)，这样就消除了\(R_{1}\)、\(R_{2}\)自身误差对测量误差的影响。如此一来，\(R_{x}\)的不确定度为\(\frac{\Delta R_{x}}{R_{x}}=\frac{1}{2}\sqrt{(\frac{\Delta R_{s}}{R_{s}})^{2}+(\frac{\Delta R_{s}'}{R_{s}'})^{2}}\approx\frac{\Delta R_{s}}{R_{s}}\)，其只与\(R_{s}\)的仪器误差有关，而\(R_{s}\)可选用具有一定精度的标准电阻箱，以此减小\(R_{x}\)的系统误差。实验时\(R_{s}\)常用十进位转盘直流电阻箱，其仪器允差为\(\frac{\Delta R_{s}}{R_{s}}=\pm(a + b\frac{m}{R_{s}})\%\)，一般常用的 0.1 级十进位转盘电阻箱有\(a = 0.1\)，\(b = 0.2\)，即\(\Delta R_{s}=(0.001R_{s}+0.002m)\)， m=6。
+    
+    \subsubsection*{电桥灵敏度：}
+    为定量确定电桥灵敏度，引入电桥灵敏度概念，定义为\(S=\frac{\Delta d}{\frac{\Delta R_{s}}{R_{s}}}\)。显然，电桥灵敏度S越大，对电桥平衡的判断就越容易，测量结果也更准确，实验中可据此测出所用电桥的灵敏度。在实验中由于电桥灵敏度引入的不确定度\(\Delta_{S}R_{x}\)可用下述方法估测：当电桥达到平衡时略微改变\(R_{s}\)，使检流计指针偏离零点 0.2 小格（人眼能察觉的界限），此时可求得\(\Delta_{S}R_{x}=\frac{0.2R_{s}}{S}\)，则最终相对不确定度的计算公式应为\(E=\frac{\Delta R_{x}}{R_{x}}=\sqrt{(0.001+\frac{0.002m}{R_{s}})^{2}+(\frac{0.2}{S})^{2}}\)
+    
+    \subsection{实验重点}
+    
+    \xiaosi（简述本实验的学习重点，不超过100字，3分）
+
+    \myspace{1}
+
+    掌握惠斯通电桥平衡条件及推导过程；学会搭建实验电路，正确连接电源、灵敏电流计和电阻；能通过调节标准电阻使电桥平衡，进而计算待测电阻阻值。
+    
+    
+    \subsection{实验难点}
+    
+    \xiaosi（简述本实验的实现难点，不超过100字，2分）
+
+    \myspace{1}
+
+    灵敏电流计灵敏度高，调节标准电阻时指针偏转微小，难精准判断平衡状态；电路接线多，易出现接线错误导致电桥无法正常工作，需反复检查。
+
+
+\section{原始数据}
+
+    \xiaosi （将有老师签名的“自备数据记录草稿纸”的扫描或手机拍摄图粘贴在下方，20分）
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=11cm]{实验数据.jpg}
+        \caption{实验数据}
+        \label{fig:图2}
+    \end{figure}
+
+    
+\section{结果与分析}
+
+    \subsection{数据处理与结果}
+    \xiaosi （列出数据表格、选择数据处理方法、给定测量或计算结果，30分）
+
+    \subsubsection*{自组电桥测未知电阻}
+
+    % 这是一个完整的、可浮动的表格环境
+    \begin{table}[htbp]
+        \centering % 让表格居中显示
+        \caption{自组电桥测未知电阻} % 表格的标题
+        \label{tab:resistance_data} % 表格的标签，用于交叉引用
+        \begin{tabular}{*{7}{c}} % 定义表格有7列，每一列都居中(c)
+            \toprule % 画出顶部的粗横线 (来自 booktabs)
+            测量次数 & $R_{1}/\Omega$ & $R_{2}/\Omega$ & $R_s/\Omega$ & $\Delta d_{1}/\text{格}$ & $R_s{'}/\Omega$ & $\Delta d_{2}/\text{格}$ \\
+            \midrule % 画出中间的分割线 (来自 booktabs)
+            1 & 200 & 200 & 223.8 & 4 & 223.8 & 9 \\
+            2 & 300 & 300 & 223.8 & 4 & 223.8 & 7 \\
+            3 & 500 & 500 & 223.8 & 3 & 223.8 & 8 \\
+            4 & 800 & 800 & 223.8 & 4 & 223.8 & 2 \\
+            5 & 1000 & 1000 & 223.8 & 1 & 223.8 & 3 \\
+            6 & 1500 & 1500 & 223.8 & 1 & 223.8 & 2 \\
+            \bottomrule % 画出底部的粗横线 (来自 booktabs)
+        \end{tabular}
+    \end{table}
+
+    由上表可知：\(\overline{R_{s}} = 222.800\Omega\)，\(\overline{R_{s}'}=222.800\Omega\)，则\(\overline{R_{x}}=\sqrt{\overline{R_{s}}\cdot\overline{R_{s}'}} = 222.80\Omega\)。
+    
+    选取\(\Delta d\)最大的一组数据：\(R_{s}=222.800\Omega\)，\(\Delta d = 9\)格;
+    
+    取\(\Delta R_{s}=0.100\Omega\)（电阻箱最小分度值），可算得电桥灵敏度\(S=\frac{\Delta d}{\frac{\Delta R_{s}}{R_{s}}}=2.0 \times10^{4}\)格;
+    
+    进而可得\(E=\frac{\Delta R_{x}}{R_{x}}=\sqrt{(0.001+\frac{0.002m}{R_{s}})^{2}+(\frac{0.2}{S})^{2}}=0.1\%\)，\(\Delta R_{x}=E\cdot \overline{R_{x}}=0.2\Omega\);
+    
+    最终测量结果\(R_{x}=\overline{R_{x}}\pm\Delta R_{x}=(222.8\pm0.2)\Omega\)。
+
+    \subsubsection*{用 QJ-23 型盒式惠斯登电桥测量未知电阻}
+
+    \begin{table}[htbp]
+        \centering % 让表格居中显示
+        \caption{用 QJ-23 型盒式惠斯登电桥测量未知电阻} % 表格的标题
+        \label{tab:resistance_data} % 表格的标签，用于交叉引用
+        \begin{tabular}{*{8}{c}} % 定义表格有7列，每一列都居中(c)
+            \toprule % 画出顶部的粗横线 (来自 booktabs)
+            $R_{x1}/\Omega$ & $R_{x2}/\Omega$ & $R_{x3}/\Omega$ & $R_{x4}/\Omega$ & $R_{x5}/\Omega$ & $R_{x6}/\Omega$ & $R_{x7}/\Omega$ & $R_{x8}/\Omega$ \\
+            \midrule % 画出中间的分割线 (来自 booktabs)
+            697.0 & 681.0 & 686.3 & 672.8 & 679.9 & 684.6 & 684.5 & 684.4 \\
+            \bottomrule % 画出底部的粗横线 (来自 booktabs)
+        \end{tabular}
+    \end{table}
+
+    由上表得：\(\overline{R_{x}} = 683.8\Omega\)，
+
+            标准偏差\(S = \sqrt{\frac{1}{8-1}\sum_{i=1}^{8}(R_{xi}-\overline{R_x})^2} = 6.83\Omega\);
+    
+            则离散度为\(\frac{S}{\overline{R_{x}}}\times100\% = 1.0\%\)。
+
+            $R_x$的最终测量结果：$R_x = \overline{R_x}(1+\frac{S}{\overline{R_x}}) = 683.8(1+1.0\%)\Omega$
+
+    \subsection{误差分析}
+    \xiaosi （运用测量误差、相对误差、不确定度等分析实验结果，20分）
+    
+    \subsubsection*{（一）系统误差}
+    
+    \textbf{电阻箱仪器误差（B 类）：}依仪器允差公式\(\frac{\Delta R}{R} = \pm(a + b\frac{m}{R})\%\)（\(a=0.1\)，\(b=0.2\)），以\(R_s=222.800\Omega\)算，\(\Delta R_s\approx0.2246\Omega\)，\(E_{R_s}\approx0.1\%\)。自组电桥用 “交换法” 消\(R_1\)、\(R_2\)误差，总系统误差仅由\(R_s\)决定。
+    
+    \textbf{检流计灵敏度误差（A 类）：}人眼分辨极限 0.2 格，依\(\Delta_{S}R_x = \frac{0.2R_s}{S}\)（\(S=2.0\times10^4\)格），\(\Delta_{S}R_x\approx0.0015\Omega\)，\(E_S\approx0.0007\%\)，可忽略。
+    
+    \subsubsection*{（二）偶然误差}
+    
+    \textbf{检流计估读误差（A 类）：}自组电桥 6 组\(\Delta d\)（9、7、8、2、3、2 格），\(\bar{\Delta d}\approx5.1\)格，样本标准偏差\(s_{\Delta d}\approx3.2\)格，\(E_{\Delta d}\approx40\%\)，但对\(R_x\)总误差贡献约 0.01\%，可忽略。
+    
+    \textbf{盒式电桥电阻离散误差（A 类）：}8 个电阻的\(\bar{R_x}=683.8\Omega\)，样本标准偏差\(s=6.83\Omega\)，\(E_{\text{离散}}\approx1.0\%\)，属偶然误差。
+    
+    \subsubsection*{（三）总不确定度与总相对误差合成}
+    
+    \textbf{自组电桥：}系统误差\(E_{\text{系统}}=0.1\%\)，偶然误差\(E_{\text{偶然}}=0.0008\%\)，总相对误差\(E_{\text{总}}=\sqrt{(0.1\%)^2 + (0.0008\%)^2}\approx0.1\%\)，\(\Delta R_x\approx0.2\Omega\)，与实验结果一致。
+    
+    \textbf{盒式电桥：}系统误差\(E_{\text{系统}}\approx0.11\%\)，偶然误差\(E_{\text{偶然}}=1.0\%\)，总相对误差\(E_{\text{总}}\approx1.0\%\)，电阻离散性是主要误差源。
+
+    \subsection{实验探讨}
+    \xiaosi （对实验内容、现象和过程的小结，不超过100字，10分）
+
+    \myspace{1}
+
+    本次实验分自组电桥和用 QJ-23 型盒式电桥测电阻。自组时组装电路、选比率臂测值并算灵敏度，盒式电桥调零后选比率臂、调旋钮使桥平衡。过程中检流计零偏时电桥平衡，最终得电阻值及离散度。
+
+\section{思考题}
+
+    \xiaosi （解答教材或讲义或老师布置的思考题，10分）
+
+    \subsubsection*{为什么用惠斯登电桥测电阻比伏安法测量的准确度高？用电桥法测电阻产生误差的主要原因是什么？}
+    
+    答：伏安法测电阻是根据\(R=\frac{U}{I}\)，但电压表和电流表的内阻会引起较大误差；而电桥法的误差仅来自\(R_{1}\)、\(R_{2}\)、\(R_{s}\)，不会因检流计内阻带来误差，且\(R_{1}\)、\(R_{2}\)带来的误差又可用交换法消除，因此准确度较高。用电桥法测电阻产生误差的主要原因是\(R_{s}\)的仪器误差、检流计未能完全调零带来的误差等。
+    
+    \subsubsection*{为提高电桥测量灵敏度，应采取哪些措施？为什么？}
+    
+    答：①选用灵敏度更高的检流计以及分度值更小的电阻箱，灵敏度更高的检流计能更敏锐地反映电流变化，分度值更小的电阻箱可更精确调节\(R_{s}\)，从而提高测量灵敏度；②更换电桥比率臂，增加有效数字位数，有效数字位数增多可使测量结果更精确，进而提高测量灵敏度。
+    
+    \subsubsection*{用电桥测电阻时，若线路接通后检流计指针总是往一个方向偏转或不偏转，试分析是什么原因？}
+    
+    答：①总是往一个方向偏转：电路连接有误，出现短路；挡位或电桥比率臂设置不合理；②总不偏转：电路连接有误出现断路，仪器发生故障，电源故障（如无电压输出等）。
+    
+    \subsubsection*{惠斯登电桥比率臂选取的原则是什么？为什么要这样选取？}
+    
+    答：原则是保证在电阻箱不超过最大阻值的前提下尽可能多地使用其位数，从而增加结果的有效数字位数，此外，应使比率为 10 的整数次幂，避免计算复杂。这样选取是为了提高测量结果的精确度，有效数字位数越多，测量结果越精确，比率为 10 的整数次幂可简化计算过程，减少计算误差。
+    
+    \subsubsection*{如何使用自组电桥测量电表内阻（注意电表所能允许通过的最大电流）？根据电桥平衡的特点，可否将桥路中的检流计去掉，换成待测电表判别电桥平衡？}
+    
+    答：用电流表 A 替换\(R_{x}\)，即可使用自组电桥测量电表内阻，通过电流表的电流\(I_{A}=\frac{E}{R + R_{A}}\)（E为电源电动势，R为电路中其他电阻），注意选取合适的R和E，避免\(I_{A}\)超出量程而损坏电流表；原理上可行，但由于电流表 A 精度远低于检流计，此方法误差较大，不推荐使用。
+
+
+\newpage
+
+\sihao\textbf{注意事项：}
+\xiaosi
+\begin{enumerate}
+    \item  用 PDF 格式上传“实验报告”，文件名：学生姓名+学号+实验名称+周次。
+    \item  “实验报告”必须递交在“学在浙大”的本课程的对应实验项目的“作业”模块内。
+    \item  “实验报告”成绩必须在“浙江大学物理实验教学中心网站”-“选课系统”内查询。
+    \item 教学评价必须在“浙江大学物理实验教学中心网站”-“选课系统”内进行，学生必须进行教学评价，才能看到实验报告成绩，教学评价必须在本次实验结束后 3 天内进行。
+\end{enumerate}
+
+\vspace{1cm}
+\xiaosi\centering \textbf{浙江大学物理实验教学中心制}
+
+\end{document}
