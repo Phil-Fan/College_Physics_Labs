@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1763405339 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763405340
-  "实验报告.xdv" 1763405339 56628 61e4cee4b61afa95e287d9d00aec4269 "xelatex"
+["xdvipdfmx"] 1763503924 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763503924
+  "实验报告.xdv" 1763503924 56320 804c0a91e1703eece21d21fd9974bcff "xelatex"
   (generated)
   "实验报告.pdf"
-["xelatex"] 1763405339 "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/棱镜偏向角特性/棱镜偏向角特性/实验报告.tex" "实验报告.xdv" "实验报告" 1763405340
+["xelatex"] 1763503919 "/home/maoting/github_repo/College_Physics_Labs/棱镜偏向角特性86(100)/棱镜偏向角特性/实验报告.tex" "实验报告.xdv" "实验报告" 1763503924
   "/etc/texmf/web2c/texmf.cnf" 1758734536 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/棱镜偏向角特性/棱镜偏向角特性/实验报告.tex" 1763404966 14039 bc21f49a7b6d7782ad8db8ae8ec210e9 ""
+  "/home/maoting/github_repo/College_Physics_Labs/棱镜偏向角特性86(100)/棱镜偏向角特性/实验报告.tex" 1763503919 14012 d2ed2b4545bd3d110f48159fa1384ee3 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -123,10 +123,10 @@
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1763418294 5135509 55e73cadad655dc5054e2d94fb18417e ""
   "head.png" 1758733858 49636 67546532e20047d0516b891a2ec2cb36 ""
   "nonlinear_fit_chart.jpg" 1763402800 254896 bb246eaa5f5342845b89419132881530 ""
-  "实验报告.aux" 1763405339 2675 d4ec9a6aaafac219802ebe4e7cc18b94 "xelatex"
-  "实验报告.out" 1763405339 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
-  "实验报告.tex" 1763404966 14039 bc21f49a7b6d7782ad8db8ae8ec210e9 ""
-  "实验数据.jpg" 1763399148 173143 c68a29a6ae86ce2770cdfa49513ae527 ""
+  "实验报告.aux" 1763503924 2675 d4ec9a6aaafac219802ebe4e7cc18b94 "xelatex"
+  "实验报告.out" 1763503924 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
+  "实验报告.tex" 1763503919 14012 d2ed2b4545bd3d110f48159fa1384ee3 ""
+  "实验数据.jpg" 1763503246 463857 4c49c07e69eb820b87a75177dde3b5f1 ""
   "折射率测量.png" 1763394101 62532 c0b527680105148fba9a9209c0e4eeb1 ""
   "棱镜偏向角.png" 1763393120 64969 98e4aeab17cfd679002400d5bbc42544 ""
   (generated)

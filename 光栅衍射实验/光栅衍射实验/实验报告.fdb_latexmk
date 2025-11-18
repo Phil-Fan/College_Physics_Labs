@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1763495433 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763495433
-  "实验报告.xdv" 1763495432 83048 ab4139a8eb88fc6faf82fdc1c487e784 "xelatex"
+["xdvipdfmx"] 1763503750 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763503750
+  "实验报告.xdv" 1763503750 82836 754859365f082153db211b64705c8705 "xelatex"
   (generated)
   "实验报告.pdf"
-["xelatex"] 1763495432 "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/光栅衍射实验/光栅衍射实验/实验报告.tex" "实验报告.xdv" "实验报告" 1763495433
+["xelatex"] 1763503749 "/home/maoting/github_repo/College_Physics_Labs/光栅衍射实验/光栅衍射实验/实验报告.tex" "实验报告.xdv" "实验报告" 1763503750
   "/etc/texmf/web2c/texmf.cnf" 1758734536 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/光栅衍射实验/光栅衍射实验/实验报告.tex" 1763495432 20418 6ee3948c4ee3ae2b99db2145abb28899 ""
+  "/home/maoting/github_repo/College_Physics_Labs/光栅衍射实验/光栅衍射实验/实验报告.tex" 1763503749 20376 31ee7546745d689b1af259439177037f ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -123,10 +123,10 @@
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1763418294 5135509 55e73cadad655dc5054e2d94fb18417e ""
   "head.png" 1758733858 49636 67546532e20047d0516b891a2ec2cb36 ""
   "使用分光计观察透射光栅衍射光谱示意图.png" 1763433117 18951 145f6fd876f15b17f81e6506d4b93d7a ""
-  "实验报告.aux" 1763495432 2851 3c118a900d31ff4f7901241176980c16 "xelatex"
-  "实验报告.out" 1763495432 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
-  "实验报告.tex" 1763495432 20418 6ee3948c4ee3ae2b99db2145abb28899 ""
-  "实验数据.jpg" 1763489700 218095 be6e3707ee13f021c12cbe6a1de4c492 ""
+  "实验报告.aux" 1763503750 2851 3c118a900d31ff4f7901241176980c16 "xelatex"
+  "实验报告.out" 1763503750 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
+  "实验报告.tex" 1763503749 20376 31ee7546745d689b1af259439177037f ""
+  "实验数据.jpg" 1763503153 363743 24de729c5f225d8e9a45b8fbfddd9020 ""
   "透射光栅原理示意图.png" 1763433063 8802 8112253ea6a9cdb9dba9cc5f5bb6f923 ""
   "透射光栅摆放位置示意图.png" 1763434471 408248 95dc290205b0f20e9622409b0fe2a060 ""
   (generated)

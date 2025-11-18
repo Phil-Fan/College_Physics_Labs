@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.9.25)  17 OCT 2025 05:39
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.18)  19 NOV 2025 06:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/双臂电桥预习/实验报告.tex
-(/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/双臂电桥预习/实验报告.tex
+**/home/maoting/github_repo/College_Physics_Labs/双臂电桥测低电阻87(100)/双臂电桥预习/实验报告.tex
+(/home/maoting/github_repo/College_Physics_Labs/双臂电桥测低电阻87(100)/双臂电桥预习/实验报告.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2021/12/12 v2.5.8 Backend configuration file (CTEX)
@@ -615,12 +615,12 @@ Package rerunfilecheck Info: File `实验报告.out' has not changed.
 (rerunfilecheck)             Checksum: C21620CEB10EA136563B385CC358D2AA;225.
  ) 
 Here is how much of TeX's memory you used:
- 16605 strings out of 477728
- 358897 string characters out of 5842238
- 692889 words of memory out of 5000000
- 37011 multiletter control sequences out of 15000+600000
+ 16605 strings out of 476191
+ 358966 string characters out of 5812071
+ 696559 words of memory out of 5000000
+ 37103 multiletter control sequences out of 15000+600000
  479480 words of font info for 91 fonts, out of 8000000 for 9000
- 264 hyphenation exceptions out of 8191
- 89i,11n,97p,1240b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 1348 hyphenation exceptions out of 8191
+ 89i,11n,97p,1263b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 实验报告.xdv (4 pages, 33084 bytes).
+Output written on 实验报告.xdv (4 pages, 32772 bytes).

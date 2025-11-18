@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1760655406 "实验报告.xdv" "实验报告.pdf" "实验报告" 1760655406
-  "实验报告.xdv" 1760655406 65056 0b58b475ff51da298360e992316ecda6 "xelatex"
+["xdvipdfmx"] 1763504047 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763504048
+  "实验报告.xdv" 1763504047 64744 fe76e884bb51eec2b80330fe7e2fac7c "xelatex"
   (generated)
   "实验报告.pdf"
-["xelatex"] 1760655405 "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/双臂电桥/实验报告.tex" "实验报告.xdv" "实验报告" 1760655406
+["xelatex"] 1763504047 "/home/maoting/github_repo/College_Physics_Labs/双臂电桥测低电阻87(100)/双臂电桥/实验报告.tex" "实验报告.xdv" "实验报告" 1763504048
   "/etc/texmf/web2c/texmf.cnf" 1758734536 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/双臂电桥/实验报告.tex" 1760655405 16573 beaf872fbb0d25d5f62f3defd6e1aabe ""
+  "/home/maoting/github_repo/College_Physics_Labs/双臂电桥测低电阻87(100)/双臂电桥/实验报告.tex" 1763504047 16546 6b7e0e0d92db01e43c694d78754dea8f ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -108,14 +108,14 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/tex/latex/CJK/CJKfntef.sty" 1485503905 12851 a92a26031294f6fa88114f524b3b794a ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1758735084 3758370 9d7a99d81b871abb3661473d981c86f6 ""
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1763418294 5135509 55e73cadad655dc5054e2d94fb18417e ""
   "head.png" 1758733858 49636 67546532e20047d0516b891a2ec2cb36 ""
   "双臂电桥.png" 1760641719 177998 35cba9223505df38345a3b05278825df ""
   "双臂电桥2.png" 1760643560 55698 7de9d9b80fb3d85146337e3acfb69736 ""
-  "实验报告.aux" 1760655406 3156 77c53250b8957fbdae99dff60d5f3f07 "xelatex"
-  "实验报告.out" 1760655406 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
-  "实验报告.tex" 1760655405 16573 beaf872fbb0d25d5f62f3defd6e1aabe ""
-  "实验数据.jpg" 1760641859 114862 d708e6d49e6478d9549d3e2df95e2052 ""
+  "实验报告.aux" 1763504047 3156 77c53250b8957fbdae99dff60d5f3f07 "xelatex"
+  "实验报告.out" 1763504047 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
+  "实验报告.tex" 1763504047 16546 6b7e0e0d92db01e43c694d78754dea8f ""
+  "实验数据.jpg" 1763503361 174009 37d7621550ffb589d1350139372f76cd ""
   "表1.jpg" 1760653157 203807 0dca07edb7c454bc93f024d9d6c2c845 ""
   (generated)
   "实验报告.aux"

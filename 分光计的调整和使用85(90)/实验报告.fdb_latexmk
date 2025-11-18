@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1761984230 "实验报告.xdv" "实验报告.pdf" "实验报告" 1761984230
-  "实验报告.xdv" 1761984230 64552 5bda631e7c60fee95aaeea5b315bf577 "xelatex"
+["xdvipdfmx"] 1763503707 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763503707
+  "实验报告.xdv" 1763503707 64240 7c3629c307dbddd48aeda3cde3b00430 "xelatex"
   (generated)
   "实验报告.pdf"
-["xelatex"] 1761984229 "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/分光计的调整和使用/实验报告.tex" "实验报告.xdv" "实验报告" 1761984230
+["xelatex"] 1763503706 "/home/maoting/github_repo/College_Physics_Labs/分光计的调整和使用85(90)/实验报告.tex" "实验报告.xdv" "实验报告" 1763503707
   "/etc/texmf/web2c/texmf.cnf" 1758734536 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/分光计的调整和使用/实验报告.tex" 1761984229 15407 168cdda8e98ae20fa48eb972fe312c03 ""
+  "/home/maoting/github_repo/College_Physics_Labs/分光计的调整和使用85(90)/实验报告.tex" 1763503706 15380 758a10fbb46eaed5738fc91de6a231b1 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -109,14 +109,14 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/tex/latex/CJK/CJKfntef.sty" 1485503905 12851 a92a26031294f6fa88114f524b3b794a ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1758735084 3758370 9d7a99d81b871abb3661473d981c86f6 ""
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1763418294 5135509 55e73cadad655dc5054e2d94fb18417e ""
   "head.png" 1758733858 49636 67546532e20047d0516b891a2ec2cb36 ""
   "光路图.png" 1761911732 79859 627cb0e2ab958bd7395a1f45ebe0bda1 ""
   "分光计.png" 1761909744 125395 95dc79d6049d3133b0c128c47c5e15d6 ""
-  "实验报告.aux" 1761984230 2763 8c08a2d3c3b9731a050da959eb4b3229 "xelatex"
-  "实验报告.out" 1761984230 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
-  "实验报告.tex" 1761984229 15407 168cdda8e98ae20fa48eb972fe312c03 ""
-  "实验数据.jpg" 1761906812 164934 e0d87686b833f2bc0b2cd618373c4754 ""
+  "实验报告.aux" 1763503707 2763 8c08a2d3c3b9731a050da959eb4b3229 "xelatex"
+  "实验报告.out" 1763503707 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
+  "实验报告.tex" 1763503706 15380 758a10fbb46eaed5738fc91de6a231b1 ""
+  "实验数据.jpg" 1763503102 260213 52e285bdb12691b488750feede160c3b ""
   (generated)
   "实验报告.aux"
   "实验报告.log"

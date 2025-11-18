@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1763495685 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763495685
-  "实验报告.xdv" 1763495685 38932 d6ae28cf7d40868c1a50879347e2b659 "xelatex"
+["xdvipdfmx"] 1763503813 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763503814
+  "实验报告.xdv" 1763503813 38716 14e24e1cceaf459a6fcfb9922b239816 "xelatex"
   (generated)
   "实验报告.pdf"
-["xelatex"] 1763495684 "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/光栅衍射实验/光栅衍射实验预习/实验报告.tex" "实验报告.xdv" "实验报告" 1763495685
+["xelatex"] 1763503813 "/home/maoting/github_repo/College_Physics_Labs/光栅衍射实验/光栅衍射实验预习/实验报告.tex" "实验报告.xdv" "实验报告" 1763503814
   "/etc/texmf/web2c/texmf.cnf" 1758734536 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/光栅衍射实验/光栅衍射实验预习/实验报告.tex" 1763495684 9458 5a9d7e92f70420c2aa3194c4d7906e3e ""
+  "/home/maoting/github_repo/College_Physics_Labs/光栅衍射实验/光栅衍射实验预习/实验报告.tex" 1763503813 9418 b2ee95994edfaa7d3bb88d995de47318 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -111,9 +111,9 @@
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1763418294 5135509 55e73cadad655dc5054e2d94fb18417e ""
   "head.png" 1758733858 49636 67546532e20047d0516b891a2ec2cb36 ""
   "使用分光计观察透射光栅衍射光谱示意图.png" 1763433117 18951 145f6fd876f15b17f81e6506d4b93d7a ""
-  "实验报告.aux" 1763495685 1681 f2dbfc3f65c4a9699ef4efe8f111d81a "xelatex"
-  "实验报告.out" 1763495685 225 c21620ceb10ea136563b385cc358d2aa "xelatex"
-  "实验报告.tex" 1763495684 9458 5a9d7e92f70420c2aa3194c4d7906e3e ""
+  "实验报告.aux" 1763503813 1681 f2dbfc3f65c4a9699ef4efe8f111d81a "xelatex"
+  "实验报告.out" 1763503813 225 c21620ceb10ea136563b385cc358d2aa "xelatex"
+  "实验报告.tex" 1763503813 9418 b2ee95994edfaa7d3bb88d995de47318 ""
   "透射光栅原理示意图.png" 1763433063 8802 8112253ea6a9cdb9dba9cc5f5bb6f923 ""
   "透射光栅摆放位置示意图.png" 1763434471 408248 95dc290205b0f20e9622409b0fe2a060 ""
   (generated)

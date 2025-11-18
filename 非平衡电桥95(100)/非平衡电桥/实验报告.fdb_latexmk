@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1760321086 "实验报告.xdv" "实验报告.pdf" "实验报告" 1760321086
-  "实验报告.xdv" 1760321086 70072 9766717768ffd6d27a9d1aefed995a77 "xelatex"
+["xdvipdfmx"] 1763503633 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763503633
+  "实验报告.xdv" 1763503633 69760 6ce5eb6a8ed1b21807c6424d5273636f "xelatex"
   (generated)
   "实验报告.pdf"
-["xelatex"] 1760321086 "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/非平衡电桥/实验报告.tex" "实验报告.xdv" "实验报告" 1760321086
+["xelatex"] 1763503632 "/home/maoting/github_repo/College_Physics_Labs/非平衡电桥95(100)/非平衡电桥/实验报告.tex" "实验报告.xdv" "实验报告" 1763503633
   "/etc/texmf/web2c/texmf.cnf" 1758734536 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/非平衡电桥/实验报告.tex" 1760321085 16427 0662604a7df924a805b0635a8bc0a75f ""
+  "/home/maoting/github_repo/College_Physics_Labs/非平衡电桥95(100)/非平衡电桥/实验报告.tex" 1763503595 16400 935c6f2cce3f769a47c970be6676a3d4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -108,12 +108,12 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/tex/latex/CJK/CJKfntef.sty" 1485503905 12851 a92a26031294f6fa88114f524b3b794a ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1758735084 3758370 9d7a99d81b871abb3661473d981c86f6 ""
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1763418294 5135509 55e73cadad655dc5054e2d94fb18417e ""
   "head.png" 1758733858 49636 67546532e20047d0516b891a2ec2cb36 ""
-  "实验报告.aux" 1760321086 3141 fbdff050456d702e19df97574d971ad4 "xelatex"
-  "实验报告.out" 1760321086 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
-  "实验报告.tex" 1760321085 16427 0662604a7df924a805b0635a8bc0a75f ""
-  "实验数据.jpg" 1760308685 77130 d7765632cf1f442d263504db5e67f1fa ""
+  "实验报告.aux" 1763503633 3141 fbdff050456d702e19df97574d971ad4 "xelatex"
+  "实验报告.out" 1763503633 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
+  "实验报告.tex" 1763503595 16400 935c6f2cce3f769a47c970be6676a3d4 ""
+  "实验数据.jpg" 1763503046 156852 e1e8df726343747670f68170fca5e63a ""
   "表1.jpg" 1760319298 236171 591f807d790aa2c222a6967bd3615f9d ""
   "表2.jpg" 1760319935 233953 52aaa1d36d9dd4d81e000e06a38584f5 ""
   "非平衡电桥.png" 1760311852 278271 299c163cd4f9c3443523ed8db209f725 ""

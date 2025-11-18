@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1761419902 "实验报告.xdv" "实验报告.pdf" "实验报告" 1761419903
-  "实验报告.xdv" 1761419902 73556 bcd41cafbd8581ec08880ff95d87566f "xelatex"
+["xdvipdfmx"] 1763503990 "实验报告.xdv" "实验报告.pdf" "实验报告" 1763503990
+  "实验报告.xdv" 1763503990 73244 264051c2af22e36bbc45dc19b4f6102f "xelatex"
   (generated)
   "实验报告.pdf"
-["xelatex"] 1761419902 "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/示波器的使用/实验报告.tex" "实验报告.xdv" "实验报告" 1761419903
+["xelatex"] 1763503989 "/home/maoting/github_repo/College_Physics_Labs/示波器的使用85(90)/实验报告.tex" "实验报告.xdv" "实验报告" 1763503990
   "/etc/texmf/web2c/texmf.cnf" 1758734536 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/media/maoting/File/大二秋冬/大物实验/毛挺-大物实验报告/示波器的使用/实验报告.tex" 1761419902 16923 16ba179482ae64cf8f1cbffa21085e59 ""
+  "/home/maoting/github_repo/College_Physics_Labs/示波器的使用85(90)/实验报告.tex" 1763503989 16896 474809fffd69cfb9131bca46ef019ffa ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -109,7 +109,7 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/tex/latex/CJK/CJKfntef.sty" 1485503905 12851 a92a26031294f6fa88114f524b3b794a ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1758735084 3758370 9d7a99d81b871abb3661473d981c86f6 ""
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1763418294 5135509 55e73cadad655dc5054e2d94fb18417e ""
   "1：1.jpg" 1761414618 1501451 8ce17108e6ac28b918963d6ad3e1b528 ""
   "1：2.jpg" 1761414860 547161 a2309878e5d04c81763f55ce96950218 ""
   "1：3.jpg" 1761414944 1463612 ccbd1d0b5c9e122a5f091e8275b09d00 ""
@@ -118,10 +118,10 @@
   "3：1.jpg" 1761415161 599115 b42d8960653ea20a58c3f7dbcd7b582c ""
   "head.png" 1758733858 49636 67546532e20047d0516b891a2ec2cb36 ""
   "二极管测量.jpg" 1761418053 412513 f324adcca10a280e0b45a741c8810881 ""
-  "实验报告.aux" 1761419902 3250 3f6b733221d092ff1b3e4f1b0f0e98ce "xelatex"
-  "实验报告.out" 1761419902 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
-  "实验报告.tex" 1761419902 16923 16ba179482ae64cf8f1cbffa21085e59 ""
-  "实验数据.jpg" 1761417590 534858 44251767eb22908327fff8da0aa22f22 ""
+  "实验报告.aux" 1763503990 3250 3f6b733221d092ff1b3e4f1b0f0e98ce "xelatex"
+  "实验报告.out" 1763503990 859 663299f7225dc994b1ef9815fc7925d6 "xelatex"
+  "实验报告.tex" 1763503989 16896 474809fffd69cfb9131bca46ef019ffa ""
+  "实验数据.jpg" 1763503322 861175 7bf3f7543fe1a448aca35ba9e40ceb72 ""
   "波形扫描原理.png" 1761402588 39205 0f3b5cbc1be585b4fb476e0b8abcb7ec ""
   "相位差测量.jpg" 1761419196 572270 a157332f22597cdf8aa948a8a2b2a333 ""
   "示波器.png" 1761402362 147152 0759885ff135370e8858290551f84e70 ""
