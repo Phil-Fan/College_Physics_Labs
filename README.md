@@ -82,7 +82,31 @@
 
 4. 使用 VSCode 打开项目（建议安装 `LaTeX Workshop` 插件）
 
-5. 打开对应的实验报告 `.tex` 文件，使用 LaTeX Workshop 编译生成 PDF
+5. **编译实验报告**
+
+   项目提供了 Makefile，可以一键编译所有实验报告：
+
+   ```bash
+   # 编译所有实验报告
+   make
+
+   # 查看所有需要编译的文件
+   make list
+
+   # 编译单个文件
+   make compile TEX=光栅衍射实验/光栅衍射实验/实验报告.tex
+
+   # 清理编译中间文件
+   make clean
+
+   # 清理所有 PDF 文件
+   make clean-pdf
+
+   # 查看帮助
+   make help
+   ```
+
+   或者使用 VSCode 的 LaTeX Workshop 插件手动编译单个文件。
 
 6. 如需运行 Python 绘图脚本：
    - 进入对应实验文件夹
